@@ -1,0 +1,11 @@
+FROM python:${PYTHON_VERSION}
+
+RUN pip3 install --no-cache-dir pytest
+RUN pip3 install --no-cache-dir protobuf
+RUN pip3 install --no-cache-dir grpcio
+RUN mkdir -p /run/user/1000
+
+VOLUME ["/pycontainerd", "/tests"]
+
+WORKDIR /tests
+

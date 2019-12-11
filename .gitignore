@@ -1,0 +1,9 @@
+__pycache__
+**/*.egg-info
+**/build/*
+**/dist/*
+tmp/*
+script/docker/tests/Dockerfile
+script/docker/build/Dockerfile
+packages
+
