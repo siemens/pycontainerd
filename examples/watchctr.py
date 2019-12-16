@@ -39,7 +39,7 @@ def watchctr(args):
             print(unwrap(ev))
 
 def main():
-    from containerd import __version__
+    from containerd import __api_version__
     
     parser = argparse.ArgumentParser(
         prog='watchctr',
@@ -49,7 +49,7 @@ def main():
     parser.add_argument(
         '--version',
         action='version',
-        version='%(prog)s ' + __version__,
+        version='%(prog)s ' + __api_version__,
         help='show version information and exit'
     )
     parser.add_argument(
