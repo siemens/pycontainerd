@@ -23,8 +23,8 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
         'License :: OSI Approved :: Apache Software License',
         'Topic :: Software Development :: Libraries',
-        'Topic :: System :: Containers',
-        'Topic :: System :: Clustering'
+        'Topic :: System :: Clustering',
+        'Topic :: Utilities'
     ],
     license='Apache-2.0',
     author='Silvano Cirujano Cuesta',
