@@ -136,6 +136,7 @@ import grpc
 from containerd.services.containers.v1 import containers_pb2_grpc, containers_pb2
 
 with grpc.insecure_channel('unix:///run/containerd/containerd.sock') as channel:
+    containersv1 = containers_pb2_grpc.ContainersStub(channel)
     containers = containersv1.List(
         containers_pb2.ListContainersRequest(),
         metadata=(('containerd-namespace', 'moby'),)).containers
