@@ -22,7 +22,7 @@
 import grpc
 
 from containerd.services.events.v1 import unwrap, events_pb2, events_pb2_grpc
-from containerd.vendor.google.protobuf import any_pb2
+from google.protobuf import any_pb2
 
 import argparse
 
