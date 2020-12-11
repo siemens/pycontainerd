@@ -3,6 +3,7 @@ __pycache__
 **/build/*
 **/dist/*
 tmp/*
+temp/*
 script/docker/tests/Dockerfile
 script/docker/build/Dockerfile
 packages
