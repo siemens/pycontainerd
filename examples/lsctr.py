@@ -48,8 +48,8 @@ def lsctr(args):
         # containerd-specific user-space organizational means only.
         try:
             namespaces = namespacev1.List(namespace_pb2.ListNamespacesRequest()).namespaces
-        except grpc._channel._Rendezvous as e:
-            print('ERROR: cannot connect: {}'.format(e.details()))
+        except grpc.RpcError as e:
+            print('ERROR: cannot connect: {}'.format(e))
             return
         # Now look for containers and their corresponding tasks in each of the
         # containerd namespaces...
