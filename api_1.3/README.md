@@ -136,6 +136,7 @@ import grpc
 from containerd.services.containers.v1 import containers_pb2_grpc, containers_pb2
 
 with grpc.insecure_channel('unix:///run/containerd/containerd.sock') as channel:
+    containersv1 = containers_pb2_grpc.ContainersStub(channel)
     containers = containersv1.List(
         containers_pb2.ListContainersRequest(),
         metadata=(('containerd-namespace', 'moby'),)).containers
@@ -248,7 +249,6 @@ follows:
 # Survival References
 
 - [gRPC Basics -- Python](https://grpc.io/docs/tutorials/basic/python/).
-- [Protocol Buffers Python Reference: Python Generated
-  Code](https://developers.google.com/protocol-buffers/docs/reference/python-generated).
-- [containerd API protocol
-  definitions](https://github.com/containerd/containerd/tree/master/api).
+- [Protocol Buffers Python Reference: Python Generated Code](https://developers.google.com/protocol-buffers/docs/reference/python-generated).
+- [containerd API protocol definitions](https://github.com/containerd/containerd/tree/master/api).
+
