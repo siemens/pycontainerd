@@ -2,17 +2,17 @@
 #
 # Copyright 2019 Siemens AG
 #
-#   Licensed under the Apache License, Version 2.0 (the "License");
-#   you may not use this file except in compliance with the License.
-#   You may obtain a copy of the License at
+#   Licensed under the Apache License, Version 2.0 (the "License"); you may not
+#   use this file except in compliance with the License. You may obtain a copy
+#   of the License at
 #
 #     http://www.apache.org/licenses/LICENSE-2.0
 #
 #   Unless required by applicable law or agreed to in writing, software
-#   distributed under the License is distributed on an "AS IS" BASIS,
-#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#   See the License for the specific language governing permissions and
-#   limitations under the License.
+#   distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+#   WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+#   License for the specific language governing permissions and limitations
+#   under the License.
 #
 # SPDX-License-Identifier: Apache-2.0
 #------------
@@ -21,27 +21,23 @@
 # .proto files describing the containerd API and the required dependencies
 # dependencies. It first downloads the .proto definitions from its source
 # repositories, in specific versions. It then generates a temporary .proto file
-# hierarchy with the dependencies moved into a "vendor" branch (namespace). The
-# .proto files are getting edited automatically to correctly reference their
-# dependencies inside the vendor namespace. Finally, the script runs the protoc
-# compile to generate the Python packages/modules for the Python containerd API.
+# hierarchy from only the ones actually required to build the Python containerd
+# API modules. The .proto files are getting edited automatically to correctly
+# reference their dependencies without import path aliasing (which would then
+# result in runtime errors due to the same gRPC elements getting registered more
+# than once). Finally, the script runs the protoc compile to generate the Python
+# packages/modules for the Python containerd API.
 #
 # The overall structure is as follows:
 #
-# - 1.3/containerd/: contains the Python containerd binding packages for API
-#       version 1.3. Please note that this branch contains a few hand-written
-#       Python modules in addition to the automatically generated gRPC/protobuf
-#       Python modules.
-#    - vendor/: contains the depencies need by the container API packages, moved
-#          here in order to avoid Python package name clashes on the top level,
-#          such as for "github", "google", and "gogoproto".
-#       - github/com/: contains the github.com-related gRPC/Python packages.
-#       - github.com->github/com: symbolic link to work around a quirk in the
-#         protoc compiler when generating Python modules. While protoc sees
-#         "github.com" as a single element in imports, Python considers it two
-#         be two levels "github" and "com".
-#       - gogoproto/: contains depenencies packages.
-#       - google/: contains dependencies packages.
+# - 1.x/containerd/: contains the Python containerd binding packages for API
+#       version 1.x. Please note that we skip the "api" package element in order
+#       to avoid stuttering.
+#    - services/
+#    - events/
+#    - types/
+#    - protobuf/plugin/ -- fieldpath
+#    - gogoproto/ -- gogo
 
 # Only generation engine mechanics beyond this point.
 shopt -s globstar
@@ -96,15 +92,17 @@ fi
 PROTO_DIR="$TEMP_DIR/protos"
 rm -rf "$PROTO_DIR"
 
-# The following sed stream editing expressions "vendorize" dependencies of the
-# containerd service API: this avoids potential top-level Python package name
-# clashes in the future. We simply move these dependencies into the
-# "vendor" namespace inside the "containerd" top-level namespace.
+# The following sed stream editing expressions fix "absolute" imports of
+# containerd's own API protocol files, removing the "github.com/containerd" and
+# "api" import path elements. Doing so avoids (1) import path aliasing and
+# removes the (2) stuttering "api". These expressions additionally "vendorize"
+# the "github.com/containerd/containerd/protobuf" import path to just
+# "containerd/protobuf".
 VENDORIZE=(
-    "-e" 's/import( weak)? "gogoproto\//import\1 "containerd\/vendor\/gogoproto\//g'
-    "-e" 's/import( weak)? "google\//import\1 "containerd\/vendor\/google\//g'
+    "-e" 's/import( weak)? "containerd\/api\//import\1 "containerd\//g'
     "-e" 's/import( weak)? "github.com\/containerd\/containerd\/api\//import\1 "containerd\//g'
     "-e" 's/import( weak)? "github.com\/containerd\/containerd\/protobuf\//import\1 "containerd\/protobuf\//g'
+    "-e" 's/import( weak)? "gogoproto\//import\1 "containerd\/gogoproto\//g'
 )
 
 # Copies a set of .proto source files from a source directory (and its
@@ -137,7 +135,7 @@ function prepprotos {
         RELPROTO=${PROTO#"$DIR"}
         NEWPROTO="$DESTDIR$REBASE$RELPROTO"
         NEWDIR=${NEWPROTO%/*}
-        echo "  ... $RELPROTO"
+        echo "  ... $RELPROTO --> $NEWPROTO"
         mkdir -p $NEWDIR
         sed -r "${VENDORIZE[@]}" "$PROTO" > "$NEWPROTO"
     done
@@ -171,23 +169,23 @@ generate_api () {
         clone --branch "$CONTAINERD_TAG" --depth 1 \
         https://github.com/containerd/containerd.git "$TEMP_DIR/containerd"
 
-    prepprotos "$TEMP_DIR/containerd/vendor/github.com/gogo/protobuf/gogoproto" "$PROTO_DIR" "containerd/vendor/gogoproto"
-    prepprotos "$TEMP_DIR/containerd/vendor/github.com/gogo/protobuf/protobuf" "$PROTO_DIR" "containerd/vendor"
-    prepprotos "$TEMP_DIR/containerd/vendor/github.com/gogo/googleapis/google/rpc" "$PROTO_DIR" "containerd/vendor/google/rpc"
     prepprotos "$TEMP_DIR/containerd/api/services" "$PROTO_DIR" "containerd/services"
     prepprotos "$TEMP_DIR/containerd/api/types" "$PROTO_DIR" "containerd/types"
     prepprotos "$TEMP_DIR/containerd/api/events" "$PROTO_DIR" "containerd/events"
     prepprotos "$TEMP_DIR/containerd/protobuf" "$PROTO_DIR" "containerd/protobuf"
+    cp -R "$TEMP_DIR/containerd/vendor/github.com/gogo/protobuf/gogoproto" "$PROTO_DIR/containerd"
+    cp -R "$TEMP_DIR/containerd/vendor/github.com/gogo/googleapis/google" "$PROTO_DIR"
 
     # With everything correctly in place, we can now generate the Python modules
     # in one single go (erm, not that Go, but go).
     echo "generating Python containerd modules..."
+    echo "in $PROTO_DIR"
     (
         cd api_${API_VERSION}
-        python3 -m grpc_tools.protoc \
+        python3 -m grpc.tools.protoc \
             -I="$PROTO_DIR" \
             --python_out=. --grpc_python_out=. \
-            $PROTO_DIR/**/*.proto
+            $PROTO_DIR/containerd/**/*.proto
     )
 
     # Add setup.py and README.md
