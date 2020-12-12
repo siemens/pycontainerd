@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from containerd.types import mount_pb2 as containerd_dot_types_dot_mount__pb2
 from containerd.types import metrics_pb2 as containerd_dot_types_dot_metrics__pb2
 from containerd.types import descriptor_pb2 as containerd_dot_types_dot_descriptor__pb2
@@ -27,9 +27,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z<github.com/containerd/containerd/api/services/tasks/v1;tasks',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n(containerd/services/tasks/v1/tasks.proto\x12\x1c\x63ontainerd.services.tasks.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19google/protobuf/any.proto\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a\x1e\x63ontainerd/types/metrics.proto\x1a!containerd/types/descriptor.proto\x1a containerd/types/task/task.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xec\x01\n\x11\x43reateTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\'\n\x06rootfs\x18\x03 \x03(\x0b\x32\x17.containerd.types.Mount\x12\r\n\x05stdin\x18\x04 \x01(\t\x12\x0e\n\x06stdout\x18\x05 \x01(\t\x12\x0e\n\x06stderr\x18\x06 \x01(\t\x12\x10\n\x08terminal\x18\x07 \x01(\x08\x12\x30\n\ncheckpoint\x18\x08 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12%\n\x07options\x18\t \x01(\x0b\x32\x14.google.protobuf.Any\"7\n\x12\x43reateTaskResponse\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\"5\n\x0cStartRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"\x1c\n\rStartResponse\x12\x0b\n\x03pid\x18\x01 \x01(\r\")\n\x11\x44\x65leteTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"w\n\x0e\x44\x65leteResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x03 \x01(\r\x12\x37\n\texited_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"=\n\x14\x44\x65leteProcessRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"3\n\nGetRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"<\n\x0bGetResponse\x12-\n\x07process\x18\x01 \x01(\x0b\x32\x1c.containerd.v1.types.Process\"\"\n\x10ListTasksRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"@\n\x11ListTasksResponse\x12+\n\x05tasks\x18\x01 \x03(\x0b\x32\x1c.containerd.v1.types.Process\"Q\n\x0bKillRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\x0e\n\x06signal\x18\x03 \x01(\r\x12\x0b\n\x03\x61ll\x18\x04 \x01(\x08\"\xa0\x01\n\x12\x45xecProcessRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\r\n\x05stdin\x18\x02 \x01(\t\x12\x0e\n\x06stdout\x18\x03 \x01(\t\x12\x0e\n\x06stderr\x18\x04 \x01(\t\x12\x10\n\x08terminal\x18\x05 \x01(\x08\x12\"\n\x04spec\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0f\n\x07\x65xec_id\x18\x07 \x01(\t\"\x15\n\x13\x45xecProcessResponse\"X\n\x10ResizePtyRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\r\n\x05width\x18\x03 \x01(\r\x12\x0e\n\x06height\x18\x04 \x01(\r\"F\n\x0e\x43loseIORequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\r\n\x05stdin\x18\x03 \x01(\x08\"(\n\x10PauseTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\")\n\x11ResumeTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"\'\n\x0fListPidsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"G\n\x10ListPidsResponse\x12\x33\n\tprocesses\x18\x01 \x03(\x0b\x32 .containerd.v1.types.ProcessInfo\"\xa3\x01\n\x15\x43heckpointTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12M\n\x11parent_checkpoint\x18\x02 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12%\n\x07options\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any\"K\n\x16\x43heckpointTaskResponse\x12\x31\n\x0b\x64\x65scriptors\x18\x01 \x03(\x0b\x32\x1c.containerd.types.Descriptor\"R\n\x11UpdateTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\'\n\tresources\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\"!\n\x0eMetricsRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"<\n\x0fMetricsResponse\x12)\n\x07metrics\x18\x01 \x03(\x0b\x32\x18.containerd.types.Metric\"4\n\x0bWaitRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"\\\n\x0cWaitResponse\x12\x13\n\x0b\x65xit_status\x18\x01 \x01(\r\x12\x37\n\texited_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x32\xdc\x0c\n\x05Tasks\x12k\n\x06\x43reate\x12/.containerd.services.tasks.v1.CreateTaskRequest\x1a\x30.containerd.services.tasks.v1.CreateTaskResponse\x12`\n\x05Start\x12*.containerd.services.tasks.v1.StartRequest\x1a+.containerd.services.tasks.v1.StartResponse\x12g\n\x06\x44\x65lete\x12/.containerd.services.tasks.v1.DeleteTaskRequest\x1a,.containerd.services.tasks.v1.DeleteResponse\x12q\n\rDeleteProcess\x12\x32.containerd.services.tasks.v1.DeleteProcessRequest\x1a,.containerd.services.tasks.v1.DeleteResponse\x12Z\n\x03Get\x12(.containerd.services.tasks.v1.GetRequest\x1a).containerd.services.tasks.v1.GetResponse\x12g\n\x04List\x12..containerd.services.tasks.v1.ListTasksRequest\x1a/.containerd.services.tasks.v1.ListTasksResponse\x12I\n\x04Kill\x12).containerd.services.tasks.v1.KillRequest\x1a\x16.google.protobuf.Empty\x12P\n\x04\x45xec\x12\x30.containerd.services.tasks.v1.ExecProcessRequest\x1a\x16.google.protobuf.Empty\x12S\n\tResizePty\x12..containerd.services.tasks.v1.ResizePtyRequest\x1a\x16.google.protobuf.Empty\x12O\n\x07\x43loseIO\x12,.containerd.services.tasks.v1.CloseIORequest\x1a\x16.google.protobuf.Empty\x12O\n\x05Pause\x12..containerd.services.tasks.v1.PauseTaskRequest\x1a\x16.google.protobuf.Empty\x12Q\n\x06Resume\x12/.containerd.services.tasks.v1.ResumeTaskRequest\x1a\x16.google.protobuf.Empty\x12i\n\x08ListPids\x12-.containerd.services.tasks.v1.ListPidsRequest\x1a..containerd.services.tasks.v1.ListPidsResponse\x12w\n\nCheckpoint\x12\x33.containerd.services.tasks.v1.CheckpointTaskRequest\x1a\x34.containerd.services.tasks.v1.CheckpointTaskResponse\x12Q\n\x06Update\x12/.containerd.services.tasks.v1.UpdateTaskRequest\x1a\x16.google.protobuf.Empty\x12\x66\n\x07Metrics\x12,.containerd.services.tasks.v1.MetricsRequest\x1a-.containerd.services.tasks.v1.MetricsResponse\x12]\n\x04Wait\x12).containerd.services.tasks.v1.WaitRequest\x1a*.containerd.services.tasks.v1.WaitResponseB>Z<github.com/containerd/containerd/api/services/tasks/v1;tasksX\x02\x62\x06proto3'
+  serialized_pb=b'\n(containerd/services/tasks/v1/tasks.proto\x12\x1c\x63ontainerd.services.tasks.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x19google/protobuf/any.proto\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a\x1e\x63ontainerd/types/metrics.proto\x1a!containerd/types/descriptor.proto\x1a containerd/types/task/task.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xec\x01\n\x11\x43reateTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\'\n\x06rootfs\x18\x03 \x03(\x0b\x32\x17.containerd.types.Mount\x12\r\n\x05stdin\x18\x04 \x01(\t\x12\x0e\n\x06stdout\x18\x05 \x01(\t\x12\x0e\n\x06stderr\x18\x06 \x01(\t\x12\x10\n\x08terminal\x18\x07 \x01(\x08\x12\x30\n\ncheckpoint\x18\x08 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12%\n\x07options\x18\t \x01(\x0b\x32\x14.google.protobuf.Any\"7\n\x12\x43reateTaskResponse\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\"5\n\x0cStartRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"\x1c\n\rStartResponse\x12\x0b\n\x03pid\x18\x01 \x01(\r\")\n\x11\x44\x65leteTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"w\n\x0e\x44\x65leteResponse\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x03 \x01(\r\x12\x37\n\texited_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"=\n\x14\x44\x65leteProcessRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"3\n\nGetRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"<\n\x0bGetResponse\x12-\n\x07process\x18\x01 \x01(\x0b\x32\x1c.containerd.v1.types.Process\"\"\n\x10ListTasksRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"@\n\x11ListTasksResponse\x12+\n\x05tasks\x18\x01 \x03(\x0b\x32\x1c.containerd.v1.types.Process\"Q\n\x0bKillRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\x0e\n\x06signal\x18\x03 \x01(\r\x12\x0b\n\x03\x61ll\x18\x04 \x01(\x08\"\xa0\x01\n\x12\x45xecProcessRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\r\n\x05stdin\x18\x02 \x01(\t\x12\x0e\n\x06stdout\x18\x03 \x01(\t\x12\x0e\n\x06stderr\x18\x04 \x01(\t\x12\x10\n\x08terminal\x18\x05 \x01(\x08\x12\"\n\x04spec\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0f\n\x07\x65xec_id\x18\x07 \x01(\t\"\x15\n\x13\x45xecProcessResponse\"X\n\x10ResizePtyRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\r\n\x05width\x18\x03 \x01(\r\x12\x0e\n\x06height\x18\x04 \x01(\r\"F\n\x0e\x43loseIORequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\r\n\x05stdin\x18\x03 \x01(\x08\"(\n\x10PauseTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\")\n\x11ResumeTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"\'\n\x0fListPidsRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"G\n\x10ListPidsResponse\x12\x33\n\tprocesses\x18\x01 \x03(\x0b\x32 .containerd.v1.types.ProcessInfo\"\xa3\x01\n\x15\x43heckpointTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12M\n\x11parent_checkpoint\x18\x02 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12%\n\x07options\x18\x03 \x01(\x0b\x32\x14.google.protobuf.Any\"K\n\x16\x43heckpointTaskResponse\x12\x31\n\x0b\x64\x65scriptors\x18\x01 \x03(\x0b\x32\x1c.containerd.types.Descriptor\"R\n\x11UpdateTaskRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\'\n\tresources\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\"!\n\x0eMetricsRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"<\n\x0fMetricsResponse\x12)\n\x07metrics\x18\x01 \x03(\x0b\x32\x18.containerd.types.Metric\"4\n\x0bWaitRequest\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"\\\n\x0cWaitResponse\x12\x13\n\x0b\x65xit_status\x18\x01 \x01(\r\x12\x37\n\texited_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x32\xdc\x0c\n\x05Tasks\x12k\n\x06\x43reate\x12/.containerd.services.tasks.v1.CreateTaskRequest\x1a\x30.containerd.services.tasks.v1.CreateTaskResponse\x12`\n\x05Start\x12*.containerd.services.tasks.v1.StartRequest\x1a+.containerd.services.tasks.v1.StartResponse\x12g\n\x06\x44\x65lete\x12/.containerd.services.tasks.v1.DeleteTaskRequest\x1a,.containerd.services.tasks.v1.DeleteResponse\x12q\n\rDeleteProcess\x12\x32.containerd.services.tasks.v1.DeleteProcessRequest\x1a,.containerd.services.tasks.v1.DeleteResponse\x12Z\n\x03Get\x12(.containerd.services.tasks.v1.GetRequest\x1a).containerd.services.tasks.v1.GetResponse\x12g\n\x04List\x12..containerd.services.tasks.v1.ListTasksRequest\x1a/.containerd.services.tasks.v1.ListTasksResponse\x12I\n\x04Kill\x12).containerd.services.tasks.v1.KillRequest\x1a\x16.google.protobuf.Empty\x12P\n\x04\x45xec\x12\x30.containerd.services.tasks.v1.ExecProcessRequest\x1a\x16.google.protobuf.Empty\x12S\n\tResizePty\x12..containerd.services.tasks.v1.ResizePtyRequest\x1a\x16.google.protobuf.Empty\x12O\n\x07\x43loseIO\x12,.containerd.services.tasks.v1.CloseIORequest\x1a\x16.google.protobuf.Empty\x12O\n\x05Pause\x12..containerd.services.tasks.v1.PauseTaskRequest\x1a\x16.google.protobuf.Empty\x12Q\n\x06Resume\x12/.containerd.services.tasks.v1.ResumeTaskRequest\x1a\x16.google.protobuf.Empty\x12i\n\x08ListPids\x12-.containerd.services.tasks.v1.ListPidsRequest\x1a..containerd.services.tasks.v1.ListPidsResponse\x12w\n\nCheckpoint\x12\x33.containerd.services.tasks.v1.CheckpointTaskRequest\x1a\x34.containerd.services.tasks.v1.CheckpointTaskResponse\x12Q\n\x06Update\x12/.containerd.services.tasks.v1.UpdateTaskRequest\x1a\x16.google.protobuf.Empty\x12\x66\n\x07Metrics\x12,.containerd.services.tasks.v1.MetricsRequest\x1a-.containerd.services.tasks.v1.MetricsResponse\x12]\n\x04Wait\x12).containerd.services.tasks.v1.WaitRequest\x1a*.containerd.services.tasks.v1.WaitResponseB>Z<github.com/containerd/containerd/api/services/tasks/v1;tasksX\x02\x62\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_metrics__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,containerd_dot_types_dot_task_dot_task__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_metrics__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,containerd_dot_types_dot_task_dot_task__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -110,8 +110,8 @@ _CREATETASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=328,
-  serialized_end=564,
+  serialized_start=335,
+  serialized_end=571,
 )
 
 
@@ -149,8 +149,8 @@ _CREATETASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=566,
-  serialized_end=621,
+  serialized_start=573,
+  serialized_end=628,
 )
 
 
@@ -188,8 +188,8 @@ _STARTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=623,
-  serialized_end=676,
+  serialized_start=630,
+  serialized_end=683,
 )
 
 
@@ -220,8 +220,8 @@ _STARTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=678,
-  serialized_end=706,
+  serialized_start=685,
+  serialized_end=713,
 )
 
 
@@ -252,8 +252,8 @@ _DELETETASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=708,
-  serialized_end=749,
+  serialized_start=715,
+  serialized_end=756,
 )
 
 
@@ -305,8 +305,8 @@ _DELETERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=751,
-  serialized_end=870,
+  serialized_start=758,
+  serialized_end=877,
 )
 
 
@@ -344,8 +344,8 @@ _DELETEPROCESSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=872,
-  serialized_end=933,
+  serialized_start=879,
+  serialized_end=940,
 )
 
 
@@ -383,8 +383,8 @@ _GETREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=935,
-  serialized_end=986,
+  serialized_start=942,
+  serialized_end=993,
 )
 
 
@@ -415,8 +415,8 @@ _GETRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=988,
-  serialized_end=1048,
+  serialized_start=995,
+  serialized_end=1055,
 )
 
 
@@ -447,8 +447,8 @@ _LISTTASKSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1050,
-  serialized_end=1084,
+  serialized_start=1057,
+  serialized_end=1091,
 )
 
 
@@ -479,8 +479,8 @@ _LISTTASKSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1086,
-  serialized_end=1150,
+  serialized_start=1093,
+  serialized_end=1157,
 )
 
 
@@ -532,8 +532,8 @@ _KILLREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1152,
-  serialized_end=1233,
+  serialized_start=1159,
+  serialized_end=1240,
 )
 
 
@@ -606,8 +606,8 @@ _EXECPROCESSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1236,
-  serialized_end=1396,
+  serialized_start=1243,
+  serialized_end=1403,
 )
 
 
@@ -631,8 +631,8 @@ _EXECPROCESSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1398,
-  serialized_end=1419,
+  serialized_start=1405,
+  serialized_end=1426,
 )
 
 
@@ -684,8 +684,8 @@ _RESIZEPTYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1421,
-  serialized_end=1509,
+  serialized_start=1428,
+  serialized_end=1516,
 )
 
 
@@ -730,8 +730,8 @@ _CLOSEIOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1511,
-  serialized_end=1581,
+  serialized_start=1518,
+  serialized_end=1588,
 )
 
 
@@ -762,8 +762,8 @@ _PAUSETASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1583,
-  serialized_end=1623,
+  serialized_start=1590,
+  serialized_end=1630,
 )
 
 
@@ -794,8 +794,8 @@ _RESUMETASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1625,
-  serialized_end=1666,
+  serialized_start=1632,
+  serialized_end=1673,
 )
 
 
@@ -826,8 +826,8 @@ _LISTPIDSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1668,
-  serialized_end=1707,
+  serialized_start=1675,
+  serialized_end=1714,
 )
 
 
@@ -858,8 +858,8 @@ _LISTPIDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1709,
-  serialized_end=1780,
+  serialized_start=1716,
+  serialized_end=1787,
 )
 
 
@@ -904,8 +904,8 @@ _CHECKPOINTTASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1783,
-  serialized_end=1946,
+  serialized_start=1790,
+  serialized_end=1953,
 )
 
 
@@ -936,8 +936,8 @@ _CHECKPOINTTASKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1948,
-  serialized_end=2023,
+  serialized_start=1955,
+  serialized_end=2030,
 )
 
 
@@ -975,8 +975,8 @@ _UPDATETASKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2025,
-  serialized_end=2107,
+  serialized_start=2032,
+  serialized_end=2114,
 )
 
 
@@ -1007,8 +1007,8 @@ _METRICSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2109,
-  serialized_end=2142,
+  serialized_start=2116,
+  serialized_end=2149,
 )
 
 
@@ -1039,8 +1039,8 @@ _METRICSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2144,
-  serialized_end=2204,
+  serialized_start=2151,
+  serialized_end=2211,
 )
 
 
@@ -1078,8 +1078,8 @@ _WAITREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2206,
-  serialized_end=2258,
+  serialized_start=2213,
+  serialized_end=2265,
 )
 
 
@@ -1117,8 +1117,8 @@ _WAITRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2260,
-  serialized_end=2352,
+  serialized_start=2267,
+  serialized_end=2359,
 )
 
 _CREATETASKREQUEST.fields_by_name['rootfs'].message_type = containerd_dot_types_dot_mount__pb2._MOUNT
@@ -1365,8 +1365,8 @@ _TASKS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2355,
-  serialized_end=3983,
+  serialized_start=2362,
+  serialized_end=3990,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',

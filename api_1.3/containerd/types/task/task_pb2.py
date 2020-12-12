@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n containerd/types/task/task.proto\x12\x13\x63ontainerd.v1.types\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19google/protobuf/any.proto\"\xf4\x01\n\x07Process\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\x12+\n\x06status\x18\x04 \x01(\x0e\x32\x1b.containerd.v1.types.Status\x12\r\n\x05stdin\x18\x05 \x01(\t\x12\x0e\n\x06stdout\x18\x06 \x01(\t\x12\x0e\n\x06stderr\x18\x07 \x01(\t\x12\x10\n\x08terminal\x18\x08 \x01(\x08\x12\x13\n\x0b\x65xit_status\x18\t \x01(\r\x12\x37\n\texited_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\">\n\x0bProcessInfo\x12\x0b\n\x03pid\x18\x01 \x01(\r\x12\"\n\x04info\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any*\xd6\x01\n\x06Status\x12\x1e\n\x07UNKNOWN\x10\x00\x1a\x11\x8a\x9d \rStatusUnknown\x12\x1e\n\x07\x43REATED\x10\x01\x1a\x11\x8a\x9d \rStatusCreated\x12\x1e\n\x07RUNNING\x10\x02\x1a\x11\x8a\x9d \rStatusRunning\x12\x1e\n\x07STOPPED\x10\x03\x1a\x11\x8a\x9d \rStatusStopped\x12\x1c\n\x06PAUSED\x10\x04\x1a\x10\x8a\x9d \x0cStatusPaused\x12\x1e\n\x07PAUSING\x10\x05\x1a\x11\x8a\x9d \rStatusPausing\x1a\x0e\x88\xa3\x1e\x00\xba\xa4\x1e\x06StatusX\x00\x62\x06proto3'
+  serialized_pb=b'\n containerd/types/task/task.proto\x12\x13\x63ontainerd.v1.types\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19google/protobuf/any.proto\"\xf4\x01\n\x07Process\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\x12+\n\x06status\x18\x04 \x01(\x0e\x32\x1b.containerd.v1.types.Status\x12\r\n\x05stdin\x18\x05 \x01(\t\x12\x0e\n\x06stdout\x18\x06 \x01(\t\x12\x0e\n\x06stderr\x18\x07 \x01(\t\x12\x10\n\x08terminal\x18\x08 \x01(\x08\x12\x13\n\x0b\x65xit_status\x18\t \x01(\r\x12\x37\n\texited_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\">\n\x0bProcessInfo\x12\x0b\n\x03pid\x18\x01 \x01(\r\x12\"\n\x04info\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any*\xd6\x01\n\x06Status\x12\x1e\n\x07UNKNOWN\x10\x00\x1a\x11\x8a\x9d \rStatusUnknown\x12\x1e\n\x07\x43REATED\x10\x01\x1a\x11\x8a\x9d \rStatusCreated\x12\x1e\n\x07RUNNING\x10\x02\x1a\x11\x8a\x9d \rStatusRunning\x12\x1e\n\x07STOPPED\x10\x03\x1a\x11\x8a\x9d \rStatusStopped\x12\x1c\n\x06PAUSED\x10\x04\x1a\x10\x8a\x9d \x0cStatusPaused\x12\x1e\n\x07PAUSING\x10\x05\x1a\x11\x8a\x9d \rStatusPausing\x1a\x0e\x88\xa3\x1e\x00\xba\xa4\x1e\x06StatusX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
 _STATUS = _descriptor.EnumDescriptor(
   name='Status',
@@ -67,8 +67,8 @@ _STATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=b'\210\243\036\000\272\244\036\006Status',
-  serialized_start=462,
-  serialized_end=676,
+  serialized_start=469,
+  serialized_end=683,
 )
 _sym_db.RegisterEnumDescriptor(_STATUS)
 
@@ -172,8 +172,8 @@ _PROCESS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=151,
-  serialized_end=395,
+  serialized_start=158,
+  serialized_end=402,
 )
 
 
@@ -211,8 +211,8 @@ _PROCESSINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=397,
-  serialized_end=459,
+  serialized_start=404,
+  serialized_end=466,
 )
 
 _PROCESS.fields_by_name['status'].enum_type = _STATUS

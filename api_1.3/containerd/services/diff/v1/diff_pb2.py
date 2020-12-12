@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from containerd.types import mount_pb2 as containerd_dot_types_dot_mount__pb2
 from containerd.types import descriptor_pb2 as containerd_dot_types_dot_descriptor__pb2
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z:github.com/containerd/containerd/api/services/diff/v1;diff',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n&containerd/services/diff/v1/diff.proto\x12\x1b\x63ontainerd.services.diff.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a!containerd/types/descriptor.proto\"\xf5\x01\n\x0c\x41pplyRequest\x12*\n\x04\x64iff\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12\'\n\x06mounts\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12I\n\x08payloads\x18\x03 \x03(\x0b\x32\x37.containerd.services.diff.v1.ApplyRequest.PayloadsEntry\x1a\x45\n\rPayloadsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any:\x02\x38\x01\">\n\rApplyResponse\x12-\n\x07\x61pplied\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\"\xf2\x01\n\x0b\x44iffRequest\x12%\n\x04left\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\x12&\n\x05right\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12\x12\n\nmedia_type\x18\x03 \x01(\t\x12\x0b\n\x03ref\x18\x04 \x01(\t\x12\x44\n\x06labels\x18\x05 \x03(\x0b\x32\x34.containerd.services.diff.v1.DiffRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\":\n\x0c\x44iffResponse\x12*\n\x04\x64iff\x18\x03 \x01(\x0b\x32\x1c.containerd.types.Descriptor2\xc3\x01\n\x04\x44iff\x12^\n\x05\x41pply\x12).containerd.services.diff.v1.ApplyRequest\x1a*.containerd.services.diff.v1.ApplyResponse\x12[\n\x04\x44iff\x12(.containerd.services.diff.v1.DiffRequest\x1a).containerd.services.diff.v1.DiffResponseB<Z:github.com/containerd/containerd/api/services/diff/v1;diffX\x00\x62\x06proto3'
+  serialized_pb=b'\n&containerd/services/diff/v1/diff.proto\x12\x1b\x63ontainerd.services.diff.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a!containerd/types/descriptor.proto\"\xf5\x01\n\x0c\x41pplyRequest\x12*\n\x04\x64iff\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12\'\n\x06mounts\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12I\n\x08payloads\x18\x03 \x03(\x0b\x32\x37.containerd.services.diff.v1.ApplyRequest.PayloadsEntry\x1a\x45\n\rPayloadsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any:\x02\x38\x01\">\n\rApplyResponse\x12-\n\x07\x61pplied\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\"\xf2\x01\n\x0b\x44iffRequest\x12%\n\x04left\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\x12&\n\x05right\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12\x12\n\nmedia_type\x18\x03 \x01(\t\x12\x0b\n\x03ref\x18\x04 \x01(\t\x12\x44\n\x06labels\x18\x05 \x03(\x0b\x32\x34.containerd.services.diff.v1.DiffRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\":\n\x0c\x44iffResponse\x12*\n\x04\x64iff\x18\x03 \x01(\x0b\x32\x1c.containerd.types.Descriptor2\xc3\x01\n\x04\x44iff\x12^\n\x05\x41pply\x12).containerd.services.diff.v1.ApplyRequest\x1a*.containerd.services.diff.v1.ApplyResponse\x12[\n\x04\x44iff\x12(.containerd.services.diff.v1.DiffRequest\x1a).containerd.services.diff.v1.DiffResponseB<Z:github.com/containerd/containerd/api/services/diff/v1;diffX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
 
 
 
@@ -64,8 +64,8 @@ _APPLYREQUEST_PAYLOADSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=373,
-  serialized_end=442,
+  serialized_start=380,
+  serialized_end=449,
 )
 
 _APPLYREQUEST = _descriptor.Descriptor(
@@ -109,8 +109,8 @@ _APPLYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=197,
-  serialized_end=442,
+  serialized_start=204,
+  serialized_end=449,
 )
 
 
@@ -141,8 +141,8 @@ _APPLYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=444,
-  serialized_end=506,
+  serialized_start=451,
+  serialized_end=513,
 )
 
 
@@ -180,8 +180,8 @@ _DIFFREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=706,
-  serialized_end=751,
+  serialized_start=713,
+  serialized_end=758,
 )
 
 _DIFFREQUEST = _descriptor.Descriptor(
@@ -239,8 +239,8 @@ _DIFFREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=509,
-  serialized_end=751,
+  serialized_start=516,
+  serialized_end=758,
 )
 
 
@@ -271,8 +271,8 @@ _DIFFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=753,
-  serialized_end=811,
+  serialized_start=760,
+  serialized_end=818,
 )
 
 _APPLYREQUEST_PAYLOADSENTRY.fields_by_name['value'].message_type = google_dot_protobuf_dot_any__pb2._ANY
@@ -348,8 +348,8 @@ _DIFF = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=814,
-  serialized_end=1009,
+  serialized_start=821,
+  serialized_end=1016,
   methods=[
   _descriptor.MethodDescriptor(
     name='Apply',

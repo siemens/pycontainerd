@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from containerd.types import mount_pb2 as containerd_dot_types_dot_mount__pb2
 from containerd.types import descriptor_pb2 as containerd_dot_types_dot_descriptor__pb2
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z:github.com/containerd/containerd/api/services/diff/v1;diff',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n&containerd/services/diff/v1/diff.proto\x12\x1b\x63ontainerd.services.diff.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a!containerd/types/descriptor.proto\"c\n\x0c\x41pplyRequest\x12*\n\x04\x64iff\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12\'\n\x06mounts\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\">\n\rApplyResponse\x12-\n\x07\x61pplied\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\"\xf2\x01\n\x0b\x44iffRequest\x12%\n\x04left\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\x12&\n\x05right\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12\x12\n\nmedia_type\x18\x03 \x01(\t\x12\x0b\n\x03ref\x18\x04 \x01(\t\x12\x44\n\x06labels\x18\x05 \x03(\x0b\x32\x34.containerd.services.diff.v1.DiffRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\":\n\x0c\x44iffResponse\x12*\n\x04\x64iff\x18\x03 \x01(\x0b\x32\x1c.containerd.types.Descriptor2\xc3\x01\n\x04\x44iff\x12^\n\x05\x41pply\x12).containerd.services.diff.v1.ApplyRequest\x1a*.containerd.services.diff.v1.ApplyResponse\x12[\n\x04\x44iff\x12(.containerd.services.diff.v1.DiffRequest\x1a).containerd.services.diff.v1.DiffResponseB<Z:github.com/containerd/containerd/api/services/diff/v1;diffX\x00\x62\x06proto3'
+  serialized_pb=b'\n&containerd/services/diff/v1/diff.proto\x12\x1b\x63ontainerd.services.diff.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a!containerd/types/descriptor.proto\"c\n\x0c\x41pplyRequest\x12*\n\x04\x64iff\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\x12\'\n\x06mounts\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\">\n\rApplyResponse\x12-\n\x07\x61pplied\x18\x01 \x01(\x0b\x32\x1c.containerd.types.Descriptor\"\xf2\x01\n\x0b\x44iffRequest\x12%\n\x04left\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\x12&\n\x05right\x18\x02 \x03(\x0b\x32\x17.containerd.types.Mount\x12\x12\n\nmedia_type\x18\x03 \x01(\t\x12\x0b\n\x03ref\x18\x04 \x01(\t\x12\x44\n\x06labels\x18\x05 \x03(\x0b\x32\x34.containerd.services.diff.v1.DiffRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\":\n\x0c\x44iffResponse\x12*\n\x04\x64iff\x18\x03 \x01(\x0b\x32\x1c.containerd.types.Descriptor2\xc3\x01\n\x04\x44iff\x12^\n\x05\x41pply\x12).containerd.services.diff.v1.ApplyRequest\x1a*.containerd.services.diff.v1.ApplyResponse\x12[\n\x04\x44iff\x12(.containerd.services.diff.v1.DiffRequest\x1a).containerd.services.diff.v1.DiffResponseB<Z:github.com/containerd/containerd/api/services/diff/v1;diffX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +63,8 @@ _APPLYREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=169,
-  serialized_end=268,
+  serialized_start=176,
+  serialized_end=275,
 )
 
 
@@ -95,8 +95,8 @@ _APPLYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=270,
-  serialized_end=332,
+  serialized_start=277,
+  serialized_end=339,
 )
 
 
@@ -134,8 +134,8 @@ _DIFFREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=532,
-  serialized_end=577,
+  serialized_start=539,
+  serialized_end=584,
 )
 
 _DIFFREQUEST = _descriptor.Descriptor(
@@ -193,8 +193,8 @@ _DIFFREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=335,
-  serialized_end=577,
+  serialized_start=342,
+  serialized_end=584,
 )
 
 
@@ -225,8 +225,8 @@ _DIFFRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=579,
-  serialized_end=637,
+  serialized_start=586,
+  serialized_end=644,
 )
 
 _APPLYREQUEST.fields_by_name['diff'].message_type = containerd_dot_types_dot_descriptor__pb2._DESCRIPTOR
@@ -290,8 +290,8 @@ _DIFF = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=640,
-  serialized_end=835,
+  serialized_start=647,
+  serialized_end=842,
   methods=[
   _descriptor.MethodDescriptor(
     name='Apply',

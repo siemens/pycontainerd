@@ -12,7 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from containerd.protobuf.plugin import fieldpath_pb2 as containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2
 
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z2github.com/containerd/containerd/api/events;events\240\364\036\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!containerd/events/container.proto\x12\x11\x63ontainerd.events\x1a\x19google/protobuf/any.proto\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\xa9\x01\n\x0f\x43ontainerCreate\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\x12;\n\x07runtime\x18\x03 \x01(\x0b\x32*.containerd.events.ContainerCreate.Runtime\x1a>\n\x07Runtime\x12\x0c\n\x04name\x18\x01 \x01(\t\x12%\n\x07options\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\"\xb1\x01\n\x0f\x43ontainerUpdate\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\x12>\n\x06labels\x18\x03 \x03(\x0b\x32..containerd.events.ContainerUpdate.LabelsEntry\x12\x14\n\x0csnapshot_key\x18\x04 \x01(\t\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1d\n\x0f\x43ontainerDelete\x12\n\n\x02id\x18\x01 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x01X\x02\x62\x06proto3'
+  serialized_pb=b'\n!containerd/events/container.proto\x12\x11\x63ontainerd.events\x1a\x19google/protobuf/any.proto\x1a&containerd/vendor/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\xa9\x01\n\x0f\x43ontainerCreate\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\x12;\n\x07runtime\x18\x03 \x01(\x0b\x32*.containerd.events.ContainerCreate.Runtime\x1a>\n\x07Runtime\x12\x0c\n\x04name\x18\x01 \x01(\t\x12%\n\x07options\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\"\xb1\x01\n\x0f\x43ontainerUpdate\x12\n\n\x02id\x18\x01 \x01(\t\x12\r\n\x05image\x18\x02 \x01(\t\x12>\n\x06labels\x18\x03 \x03(\x0b\x32..containerd.events.ContainerUpdate.LabelsEntry\x12\x14\n\x0csnapshot_key\x18\x04 \x01(\t\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1d\n\x0f\x43ontainerDelete\x12\n\n\x02id\x18\x01 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x01X\x02\x62\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +63,8 @@ _CONTAINERCREATE_RUNTIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=268,
-  serialized_end=330,
+  serialized_start=275,
+  serialized_end=337,
 )
 
 _CONTAINERCREATE = _descriptor.Descriptor(
@@ -108,8 +108,8 @@ _CONTAINERCREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=161,
-  serialized_end=330,
+  serialized_start=168,
+  serialized_end=337,
 )
 
 
@@ -147,8 +147,8 @@ _CONTAINERUPDATE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=465,
-  serialized_end=510,
+  serialized_start=472,
+  serialized_end=517,
 )
 
 _CONTAINERUPDATE = _descriptor.Descriptor(
@@ -199,8 +199,8 @@ _CONTAINERUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=333,
-  serialized_end=510,
+  serialized_start=340,
+  serialized_end=517,
 )
 
 
@@ -231,8 +231,8 @@ _CONTAINERDELETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=512,
-  serialized_end=541,
+  serialized_start=519,
+  serialized_end=548,
 )
 
 _CONTAINERCREATE_RUNTIME.fields_by_name['options'].message_type = google_dot_protobuf_dot_any__pb2._ANY

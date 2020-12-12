@@ -102,7 +102,7 @@ VENDORIZE=(
     "-e" 's/import( weak)? "containerd\/api\//import\1 "containerd\//g'
     "-e" 's/import( weak)? "github.com\/containerd\/containerd\/api\//import\1 "containerd\//g'
     "-e" 's/import( weak)? "github.com\/containerd\/containerd\/protobuf\//import\1 "containerd\/protobuf\//g'
-    "-e" 's/import( weak)? "gogoproto\//import\1 "containerd\/gogoproto\//g'
+    "-e" 's/import( weak)? "gogoproto\//import\1 "containerd\/vendor\/gogoproto\//g'
 )
 
 # Copies a set of .proto source files from a source directory (and its
@@ -173,11 +173,17 @@ generate_api () {
     prepprotos "$TEMP_DIR/containerd/api/types" "$PROTO_DIR" "containerd/types"
     prepprotos "$TEMP_DIR/containerd/api/events" "$PROTO_DIR" "containerd/events"
     prepprotos "$TEMP_DIR/containerd/protobuf" "$PROTO_DIR" "containerd/protobuf"
-    cp -R "$TEMP_DIR/containerd/vendor/github.com/gogo/protobuf/gogoproto" "$PROTO_DIR/containerd"
+    mkdir -p "$PROTO_DIR/containerd/vendor"
+    cp -R "$TEMP_DIR/containerd/vendor/github.com/gogo/protobuf/gogoproto" "$PROTO_DIR/containerd/vendor"
+    # We need the google/rpc .proto definitions in order to compile everything,
+    # but we don't want to get packages for them generated, as these are to be
+    # supplied by the existing pip grpcio and protobuf packages instead.
     cp -R "$TEMP_DIR/containerd/vendor/github.com/gogo/googleapis/google" "$PROTO_DIR"
 
     # With everything correctly in place, we can now generate the Python modules
-    # in one single go (erm, not that Go, but go).
+    # in one single go (erm, not that Go, but go). Please note that we only
+    # generate Python modules for things inside containerd/, but not for the
+    # google/ stuff.
     echo "generating Python containerd modules..."
     echo "in $PROTO_DIR"
     (

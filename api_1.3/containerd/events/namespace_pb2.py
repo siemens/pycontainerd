@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from containerd.protobuf.plugin import fieldpath_pb2 as containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2
 
 
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z2github.com/containerd/containerd/api/events;events\240\364\036\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!containerd/events/namespace.proto\x12\x11\x63ontainerd.events\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\x8e\x01\n\x0fNamespaceCreate\x12\x0c\n\x04name\x18\x01 \x01(\t\x12>\n\x06labels\x18\x02 \x03(\x0b\x32..containerd.events.NamespaceCreate.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x8e\x01\n\x0fNamespaceUpdate\x12\x0c\n\x04name\x18\x01 \x01(\t\x12>\n\x06labels\x18\x02 \x03(\x0b\x32..containerd.events.NamespaceUpdate.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1f\n\x0fNamespaceDelete\x12\x0c\n\x04name\x18\x01 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x01\x62\x06proto3'
+  serialized_pb=b'\n!containerd/events/namespace.proto\x12\x11\x63ontainerd.events\x1a&containerd/vendor/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\x8e\x01\n\x0fNamespaceCreate\x12\x0c\n\x04name\x18\x01 \x01(\t\x12>\n\x06labels\x18\x02 \x03(\x0b\x32..containerd.events.NamespaceCreate.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x8e\x01\n\x0fNamespaceUpdate\x12\x0c\n\x04name\x18\x01 \x01(\t\x12>\n\x06labels\x18\x02 \x03(\x0b\x32..containerd.events.NamespaceUpdate.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1f\n\x0fNamespaceDelete\x12\x0c\n\x04name\x18\x01 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x01\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
 
 
 
@@ -62,8 +62,8 @@ _NAMESPACECREATE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=231,
-  serialized_end=276,
+  serialized_start=238,
+  serialized_end=283,
 )
 
 _NAMESPACECREATE = _descriptor.Descriptor(
@@ -100,8 +100,8 @@ _NAMESPACECREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=134,
-  serialized_end=276,
+  serialized_start=141,
+  serialized_end=283,
 )
 
 
@@ -139,8 +139,8 @@ _NAMESPACEUPDATE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=231,
-  serialized_end=276,
+  serialized_start=238,
+  serialized_end=283,
 )
 
 _NAMESPACEUPDATE = _descriptor.Descriptor(
@@ -177,8 +177,8 @@ _NAMESPACEUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=279,
-  serialized_end=421,
+  serialized_start=286,
+  serialized_end=428,
 )
 
 
@@ -209,8 +209,8 @@ _NAMESPACEDELETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=423,
-  serialized_end=454,
+  serialized_start=430,
+  serialized_end=461,
 )
 
 _NAMESPACECREATE_LABELSENTRY.containing_type = _NAMESPACECREATE

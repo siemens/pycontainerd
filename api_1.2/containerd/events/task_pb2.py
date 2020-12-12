@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from containerd.types import mount_pb2 as containerd_dot_types_dot_mount__pb2
 from containerd.protobuf.plugin import fieldpath_pb2 as containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z2github.com/containerd/containerd/api/events;events\240\364\036\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x63ontainerd/events/task.proto\x12\x11\x63ontainerd.events\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\xab\x01\n\nTaskCreate\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0e\n\x06\x62undle\x18\x02 \x01(\t\x12\'\n\x06rootfs\x18\x03 \x03(\x0b\x32\x17.containerd.types.Mount\x12-\n\x02io\x18\x04 \x01(\x0b\x32\x19.containerd.events.TaskIOB\x06\xe2\xde\x1f\x02IO\x12\x12\n\ncheckpoint\x18\x05 \x01(\t\x12\x0b\n\x03pid\x18\x06 \x01(\r\".\n\tTaskStart\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\"}\n\nTaskDelete\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x03 \x01(\r\x12\x37\n\texited_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"I\n\x06TaskIO\x12\r\n\x05stdin\x18\x01 \x01(\t\x12\x0e\n\x06stdout\x18\x02 \x01(\t\x12\x0e\n\x06stderr\x18\x03 \x01(\t\x12\x10\n\x08terminal\x18\x04 \x01(\x08\"\x87\x01\n\x08TaskExit\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x04 \x01(\r\x12\x37\n\texited_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"\x1f\n\x07TaskOOM\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"6\n\rTaskExecAdded\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"E\n\x0fTaskExecStarted\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\"\"\n\nTaskPaused\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"#\n\x0bTaskResumed\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"<\n\x10TaskCheckpointed\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x12\n\ncheckpoint\x18\x02 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x03\x62\x06proto3'
+  serialized_pb=b'\n\x1c\x63ontainerd/events/task.proto\x12\x11\x63ontainerd.events\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1c\x63ontainerd/types/mount.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"\xab\x01\n\nTaskCreate\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0e\n\x06\x62undle\x18\x02 \x01(\t\x12\'\n\x06rootfs\x18\x03 \x03(\x0b\x32\x17.containerd.types.Mount\x12-\n\x02io\x18\x04 \x01(\x0b\x32\x19.containerd.events.TaskIOB\x06\xe2\xde\x1f\x02IO\x12\x12\n\ncheckpoint\x18\x05 \x01(\t\x12\x0b\n\x03pid\x18\x06 \x01(\r\".\n\tTaskStart\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\"}\n\nTaskDelete\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0b\n\x03pid\x18\x02 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x03 \x01(\r\x12\x37\n\texited_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"I\n\x06TaskIO\x12\r\n\x05stdin\x18\x01 \x01(\t\x12\x0e\n\x06stdout\x18\x02 \x01(\t\x12\x0e\n\x06stderr\x18\x03 \x01(\t\x12\x10\n\x08terminal\x18\x04 \x01(\x08\"\x87\x01\n\x08TaskExit\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\x12\x13\n\x0b\x65xit_status\x18\x04 \x01(\r\x12\x37\n\texited_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\"\x1f\n\x07TaskOOM\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"6\n\rTaskExecAdded\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\"E\n\x0fTaskExecStarted\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x0f\n\x07\x65xec_id\x18\x02 \x01(\t\x12\x0b\n\x03pid\x18\x03 \x01(\r\"\"\n\nTaskPaused\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"#\n\x0bTaskResumed\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\"<\n\x10TaskCheckpointed\x12\x14\n\x0c\x63ontainer_id\x18\x01 \x01(\t\x12\x12\n\ncheckpoint\x18\x02 \x01(\tB8Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x03\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
 
 
 
@@ -92,8 +92,8 @@ _TASKCREATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=192,
-  serialized_end=363,
+  serialized_start=199,
+  serialized_end=370,
 )
 
 
@@ -131,8 +131,8 @@ _TASKSTART = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=365,
-  serialized_end=411,
+  serialized_start=372,
+  serialized_end=418,
 )
 
 
@@ -184,8 +184,8 @@ _TASKDELETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=413,
-  serialized_end=538,
+  serialized_start=420,
+  serialized_end=545,
 )
 
 
@@ -237,8 +237,8 @@ _TASKIO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=540,
-  serialized_end=613,
+  serialized_start=547,
+  serialized_end=620,
 )
 
 
@@ -297,8 +297,8 @@ _TASKEXIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=616,
-  serialized_end=751,
+  serialized_start=623,
+  serialized_end=758,
 )
 
 
@@ -329,8 +329,8 @@ _TASKOOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=753,
-  serialized_end=784,
+  serialized_start=760,
+  serialized_end=791,
 )
 
 
@@ -368,8 +368,8 @@ _TASKEXECADDED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=786,
-  serialized_end=840,
+  serialized_start=793,
+  serialized_end=847,
 )
 
 
@@ -414,8 +414,8 @@ _TASKEXECSTARTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=842,
-  serialized_end=911,
+  serialized_start=849,
+  serialized_end=918,
 )
 
 
@@ -446,8 +446,8 @@ _TASKPAUSED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=913,
-  serialized_end=947,
+  serialized_start=920,
+  serialized_end=954,
 )
 
 
@@ -478,8 +478,8 @@ _TASKRESUMED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=949,
-  serialized_end=984,
+  serialized_start=956,
+  serialized_end=991,
 )
 
 
@@ -517,8 +517,8 @@ _TASKCHECKPOINTED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=986,
-  serialized_end=1046,
+  serialized_start=993,
+  serialized_end=1053,
 )
 
 _TASKCREATE.fields_by_name['rootfs'].message_type = containerd_dot_types_dot_mount__pb2._MOUNT
