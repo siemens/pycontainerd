@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z0github.com/containerd/containerd/api/types;types',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n!containerd/types/descriptor.proto\x12\x10\x63ontainerd.types\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\"\xea\x01\n\nDescriptor\x12\x12\n\nmedia_type\x18\x01 \x01(\t\x12\x42\n\x06\x64igest\x18\x02 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x42\n\x0b\x61nnotations\x18\x05 \x03(\x0b\x32-.containerd.types.Descriptor.AnnotationsEntry\x1a\x32\n\x10\x41nnotationsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x32Z0github.com/containerd/containerd/api/types;typesX\x00\x62\x06proto3'
+  serialized_pb=b'\n!containerd/types/descriptor.proto\x12\x10\x63ontainerd.types\x1a&containerd/vendor/gogoproto/gogo.proto\"\xea\x01\n\nDescriptor\x12\x12\n\nmedia_type\x18\x01 \x01(\t\x12\x42\n\x06\x64igest\x18\x02 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0c\n\x04size\x18\x03 \x01(\x03\x12\x42\n\x0b\x61nnotations\x18\x05 \x03(\x0b\x32-.containerd.types.Descriptor.AnnotationsEntry\x1a\x32\n\x10\x41nnotationsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x32Z0github.com/containerd/containerd/api/types;typesX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
 
 
@@ -61,8 +61,8 @@ _DESCRIPTOR_ANNOTATIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=273,
-  serialized_end=323,
+  serialized_start=280,
+  serialized_end=330,
 )
 
 _DESCRIPTOR = _descriptor.Descriptor(
@@ -113,8 +113,8 @@ _DESCRIPTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=89,
-  serialized_end=323,
+  serialized_start=96,
+  serialized_end=330,
 )
 
 _DESCRIPTOR_ANNOTATIONSENTRY.containing_type = _DESCRIPTOR

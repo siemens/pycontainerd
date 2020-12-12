@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 from containerd.types import platform_pb2 as containerd_dot_types_dot_platform__pb2
 from google.rpc import status_pb2 as google_dot_rpc_dot_status__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZLgithub.com/containerd/containerd/api/services/introspection/v1;introspection',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n8containerd/services/introspection/v1/introspection.proto\x12$containerd.services.introspection.v1\x1a\x1f\x63ontainerd/types/platform.proto\x1a\x17google/rpc/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\"\xa1\x02\n\x06Plugin\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x10\n\x08requires\x18\x03 \x03(\t\x12\x33\n\tplatforms\x18\x04 \x03(\x0b\x32\x1a.containerd.types.PlatformB\x04\xc8\xde\x1f\x00\x12J\n\x07\x65xports\x18\x05 \x03(\x0b\x32\x39.containerd.services.introspection.v1.Plugin.ExportsEntry\x12\x14\n\x0c\x63\x61pabilities\x18\x06 \x03(\t\x12$\n\x08init_err\x18\x07 \x01(\x0b\x32\x12.google.rpc.Status\x1a.\n\x0c\x45xportsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"!\n\x0ePluginsRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"V\n\x0fPluginsResponse\x12\x43\n\x07plugins\x18\x01 \x03(\x0b\x32,.containerd.services.introspection.v1.PluginB\x04\xc8\xde\x1f\x00\"(\n\x0eServerResponse\x12\x16\n\x04uuid\x18\x01 \x01(\tB\x08\xe2\xde\x1f\x04UUID2\xdf\x01\n\rIntrospection\x12v\n\x07Plugins\x12\x34.containerd.services.introspection.v1.PluginsRequest\x1a\x35.containerd.services.introspection.v1.PluginsResponse\x12V\n\x06Server\x12\x16.google.protobuf.Empty\x1a\x34.containerd.services.introspection.v1.ServerResponseBNZLgithub.com/containerd/containerd/api/services/introspection/v1;introspectionX\x03\x62\x06proto3'
+  serialized_pb=b'\n8containerd/services/introspection/v1/introspection.proto\x12$containerd.services.introspection.v1\x1a\x1f\x63ontainerd/types/platform.proto\x1a\x17google/rpc/status.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a&containerd/vendor/gogoproto/gogo.proto\"\xa1\x02\n\x06Plugin\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12\x10\n\x08requires\x18\x03 \x03(\t\x12\x33\n\tplatforms\x18\x04 \x03(\x0b\x32\x1a.containerd.types.PlatformB\x04\xc8\xde\x1f\x00\x12J\n\x07\x65xports\x18\x05 \x03(\x0b\x32\x39.containerd.services.introspection.v1.Plugin.ExportsEntry\x12\x14\n\x0c\x63\x61pabilities\x18\x06 \x03(\t\x12$\n\x08init_err\x18\x07 \x01(\x0b\x32\x12.google.rpc.Status\x1a.\n\x0c\x45xportsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"!\n\x0ePluginsRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"V\n\x0fPluginsResponse\x12\x43\n\x07plugins\x18\x01 \x03(\x0b\x32,.containerd.services.introspection.v1.PluginB\x04\xc8\xde\x1f\x00\"(\n\x0eServerResponse\x12\x16\n\x04uuid\x18\x01 \x01(\tB\x08\xe2\xde\x1f\x04UUID2\xdf\x01\n\rIntrospection\x12v\n\x07Plugins\x12\x34.containerd.services.introspection.v1.PluginsRequest\x1a\x35.containerd.services.introspection.v1.PluginsResponse\x12V\n\x06Server\x12\x16.google.protobuf.Empty\x1a\x34.containerd.services.introspection.v1.ServerResponseBNZLgithub.com/containerd/containerd/api/services/introspection/v1;introspectionX\x03\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_types_dot_platform__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_types_dot_platform__pb2.DESCRIPTOR,google_dot_rpc_dot_status__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
 
 
@@ -64,8 +64,8 @@ _PLUGIN_EXPORTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=462,
-  serialized_end=508,
+  serialized_start=469,
+  serialized_end=515,
 )
 
 _PLUGIN = _descriptor.Descriptor(
@@ -137,8 +137,8 @@ _PLUGIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=219,
-  serialized_end=508,
+  serialized_start=226,
+  serialized_end=515,
 )
 
 
@@ -169,8 +169,8 @@ _PLUGINSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=510,
-  serialized_end=543,
+  serialized_start=517,
+  serialized_end=550,
 )
 
 
@@ -201,8 +201,8 @@ _PLUGINSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=545,
-  serialized_end=631,
+  serialized_start=552,
+  serialized_end=638,
 )
 
 
@@ -233,8 +233,8 @@ _SERVERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=633,
-  serialized_end=673,
+  serialized_start=640,
+  serialized_end=680,
 )
 
 _PLUGIN_EXPORTSENTRY.containing_type = _PLUGIN
@@ -298,8 +298,8 @@ _INTROSPECTION = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=676,
-  serialized_end=899,
+  serialized_start=683,
+  serialized_end=906,
   methods=[
   _descriptor.MethodDescriptor(
     name='Plugins',

@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z@github.com/containerd/containerd/api/services/content/v1;content',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n,containerd/services/content/v1/content.proto\x12\x1e\x63ontainerd.services.content.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xbd\x02\n\x04Info\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0c\n\x04size\x18\x02 \x01(\x03\x12\x38\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12@\n\x06labels\x18\x05 \x03(\x0b\x32\x30.containerd.services.content.v1.Info.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Q\n\x0bInfoRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"H\n\x0cInfoResponse\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"z\n\rUpdateRequest\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"J\n\x0eUpdateResponse\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"%\n\x12ListContentRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"O\n\x13ListContentResponse\x12\x38\n\x04info\x18\x01 \x03(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"Z\n\x14\x44\x65leteContentRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"v\n\x12ReadContentRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\x0c\n\x04size\x18\x03 \x01(\x03\"3\n\x13ReadContentResponse\x12\x0e\n\x06offset\x18\x01 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xee\x01\n\x06Status\x12\x38\n\nstarted_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x0b\n\x03ref\x18\x03 \x01(\t\x12\x0e\n\x06offset\x18\x04 \x01(\x03\x12\r\n\x05total\x18\x05 \x01(\x03\x12\x44\n\x08\x65xpected\x18\x06 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"\x1c\n\rStatusRequest\x12\x0b\n\x03ref\x18\x01 \x01(\t\"H\n\x0eStatusResponse\x12\x36\n\x06status\x18\x01 \x01(\x0b\x32&.containerd.services.content.v1.Status\"&\n\x13ListStatusesRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"V\n\x14ListStatusesResponse\x12>\n\x08statuses\x18\x01 \x03(\x0b\x32&.containerd.services.content.v1.StatusB\x04\xc8\xde\x1f\x00\"\xd2\x02\n\x13WriteContentRequest\x12;\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32+.containerd.services.content.v1.WriteAction\x12\x0b\n\x03ref\x18\x02 \x01(\t\x12\r\n\x05total\x18\x03 \x01(\x03\x12\x44\n\x08\x65xpected\x18\x04 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x05 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\x0c\x12O\n\x06labels\x18\x07 \x03(\x0b\x32?.containerd.services.content.v1.WriteContentRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xaa\x02\n\x14WriteContentResponse\x12;\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32+.containerd.services.content.v1.WriteAction\x12\x38\n\nstarted_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x04 \x01(\x03\x12\r\n\x05total\x18\x05 \x01(\x03\x12\x42\n\x06\x64igest\x18\x06 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"\x1b\n\x0c\x41\x62ortRequest\x12\x0b\n\x03ref\x18\x01 \x01(\t*\x85\x01\n\x0bWriteAction\x12\x1d\n\x04STAT\x10\x00\x1a\x13\x8a\x9d \x0fWriteActionStat\x12\x1f\n\x05WRITE\x10\x01\x1a\x14\x8a\x9d \x10WriteActionWrite\x12!\n\x06\x43OMMIT\x10\x02\x1a\x15\x8a\x9d \x11WriteActionCommit\x1a\x13\x88\xa3\x1e\x00\xba\xa4\x1e\x0bWriteAction2\xbe\x07\n\x07\x43ontent\x12\x61\n\x04Info\x12+.containerd.services.content.v1.InfoRequest\x1a,.containerd.services.content.v1.InfoResponse\x12g\n\x06Update\x12-.containerd.services.content.v1.UpdateRequest\x1a..containerd.services.content.v1.UpdateResponse\x12q\n\x04List\x12\x32.containerd.services.content.v1.ListContentRequest\x1a\x33.containerd.services.content.v1.ListContentResponse0\x01\x12V\n\x06\x44\x65lete\x12\x34.containerd.services.content.v1.DeleteContentRequest\x1a\x16.google.protobuf.Empty\x12q\n\x04Read\x12\x32.containerd.services.content.v1.ReadContentRequest\x1a\x33.containerd.services.content.v1.ReadContentResponse0\x01\x12g\n\x06Status\x12-.containerd.services.content.v1.StatusRequest\x1a..containerd.services.content.v1.StatusResponse\x12y\n\x0cListStatuses\x12\x33.containerd.services.content.v1.ListStatusesRequest\x1a\x34.containerd.services.content.v1.ListStatusesResponse\x12v\n\x05Write\x12\x33.containerd.services.content.v1.WriteContentRequest\x1a\x34.containerd.services.content.v1.WriteContentResponse(\x01\x30\x01\x12M\n\x05\x41\x62ort\x12,.containerd.services.content.v1.AbortRequest\x1a\x16.google.protobuf.EmptyBBZ@github.com/containerd/containerd/api/services/content/v1;contentX\x00\x62\x06proto3'
+  serialized_pb=b'\n,containerd/services/content/v1/content.proto\x12\x1e\x63ontainerd.services.content.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bgoogle/protobuf/empty.proto\"\xbd\x02\n\x04Info\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0c\n\x04size\x18\x02 \x01(\x03\x12\x38\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12@\n\x06labels\x18\x05 \x03(\x0b\x32\x30.containerd.services.content.v1.Info.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Q\n\x0bInfoRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"H\n\x0cInfoResponse\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"z\n\rUpdateRequest\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"J\n\x0eUpdateResponse\x12\x38\n\x04info\x18\x01 \x01(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"%\n\x12ListContentRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"O\n\x13ListContentResponse\x12\x38\n\x04info\x18\x01 \x03(\x0b\x32$.containerd.services.content.v1.InfoB\x04\xc8\xde\x1f\x00\"Z\n\x14\x44\x65leteContentRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"v\n\x12ReadContentRequest\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x02 \x01(\x03\x12\x0c\n\x04size\x18\x03 \x01(\x03\"3\n\x13ReadContentResponse\x12\x0e\n\x06offset\x18\x01 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\"\xee\x01\n\x06Status\x12\x38\n\nstarted_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x0b\n\x03ref\x18\x03 \x01(\t\x12\x0e\n\x06offset\x18\x04 \x01(\x03\x12\r\n\x05total\x18\x05 \x01(\x03\x12\x44\n\x08\x65xpected\x18\x06 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"\x1c\n\rStatusRequest\x12\x0b\n\x03ref\x18\x01 \x01(\t\"H\n\x0eStatusResponse\x12\x36\n\x06status\x18\x01 \x01(\x0b\x32&.containerd.services.content.v1.Status\"&\n\x13ListStatusesRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"V\n\x14ListStatusesResponse\x12>\n\x08statuses\x18\x01 \x03(\x0b\x32&.containerd.services.content.v1.StatusB\x04\xc8\xde\x1f\x00\"\xd2\x02\n\x13WriteContentRequest\x12;\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32+.containerd.services.content.v1.WriteAction\x12\x0b\n\x03ref\x18\x02 \x01(\t\x12\r\n\x05total\x18\x03 \x01(\x03\x12\x44\n\x08\x65xpected\x18\x04 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x05 \x01(\x03\x12\x0c\n\x04\x64\x61ta\x18\x06 \x01(\x0c\x12O\n\x06labels\x18\x07 \x03(\x0b\x32?.containerd.services.content.v1.WriteContentRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xaa\x02\n\x14WriteContentResponse\x12;\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32+.containerd.services.content.v1.WriteAction\x12\x38\n\nstarted_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x0e\n\x06offset\x18\x04 \x01(\x03\x12\r\n\x05total\x18\x05 \x01(\x03\x12\x42\n\x06\x64igest\x18\x06 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\"\x1b\n\x0c\x41\x62ortRequest\x12\x0b\n\x03ref\x18\x01 \x01(\t*\x85\x01\n\x0bWriteAction\x12\x1d\n\x04STAT\x10\x00\x1a\x13\x8a\x9d \x0fWriteActionStat\x12\x1f\n\x05WRITE\x10\x01\x1a\x14\x8a\x9d \x10WriteActionWrite\x12!\n\x06\x43OMMIT\x10\x02\x1a\x15\x8a\x9d \x11WriteActionCommit\x1a\x13\x88\xa3\x1e\x00\xba\xa4\x1e\x0bWriteAction2\xbe\x07\n\x07\x43ontent\x12\x61\n\x04Info\x12+.containerd.services.content.v1.InfoRequest\x1a,.containerd.services.content.v1.InfoResponse\x12g\n\x06Update\x12-.containerd.services.content.v1.UpdateRequest\x1a..containerd.services.content.v1.UpdateResponse\x12q\n\x04List\x12\x32.containerd.services.content.v1.ListContentRequest\x1a\x33.containerd.services.content.v1.ListContentResponse0\x01\x12V\n\x06\x44\x65lete\x12\x34.containerd.services.content.v1.DeleteContentRequest\x1a\x16.google.protobuf.Empty\x12q\n\x04Read\x12\x32.containerd.services.content.v1.ReadContentRequest\x1a\x33.containerd.services.content.v1.ReadContentResponse0\x01\x12g\n\x06Status\x12-.containerd.services.content.v1.StatusRequest\x1a..containerd.services.content.v1.StatusResponse\x12y\n\x0cListStatuses\x12\x33.containerd.services.content.v1.ListStatusesRequest\x1a\x34.containerd.services.content.v1.ListStatusesResponse\x12v\n\x05Write\x12\x33.containerd.services.content.v1.WriteContentRequest\x1a\x34.containerd.services.content.v1.WriteContentResponse(\x01\x30\x01\x12M\n\x05\x41\x62ort\x12,.containerd.services.content.v1.AbortRequest\x1a\x16.google.protobuf.EmptyBBZ@github.com/containerd/containerd/api/services/content/v1;contentX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 _WRITEACTION = _descriptor.EnumDescriptor(
   name='WriteAction',
@@ -53,8 +53,8 @@ _WRITEACTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=b'\210\243\036\000\272\244\036\013WriteAction',
-  serialized_start=2416,
-  serialized_end=2549,
+  serialized_start=2423,
+  serialized_end=2556,
 )
 _sym_db.RegisterEnumDescriptor(_WRITEACTION)
 
@@ -99,8 +99,8 @@ _INFO_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=482,
-  serialized_end=527,
+  serialized_start=489,
+  serialized_end=534,
 )
 
 _INFO = _descriptor.Descriptor(
@@ -158,8 +158,8 @@ _INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=210,
-  serialized_end=527,
+  serialized_start=217,
+  serialized_end=534,
 )
 
 
@@ -190,8 +190,8 @@ _INFOREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=529,
-  serialized_end=610,
+  serialized_start=536,
+  serialized_end=617,
 )
 
 
@@ -222,8 +222,8 @@ _INFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=612,
-  serialized_end=684,
+  serialized_start=619,
+  serialized_end=691,
 )
 
 
@@ -261,8 +261,8 @@ _UPDATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=686,
-  serialized_end=808,
+  serialized_start=693,
+  serialized_end=815,
 )
 
 
@@ -293,8 +293,8 @@ _UPDATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=810,
-  serialized_end=884,
+  serialized_start=817,
+  serialized_end=891,
 )
 
 
@@ -325,8 +325,8 @@ _LISTCONTENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=886,
-  serialized_end=923,
+  serialized_start=893,
+  serialized_end=930,
 )
 
 
@@ -357,8 +357,8 @@ _LISTCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=925,
-  serialized_end=1004,
+  serialized_start=932,
+  serialized_end=1011,
 )
 
 
@@ -389,8 +389,8 @@ _DELETECONTENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1006,
-  serialized_end=1096,
+  serialized_start=1013,
+  serialized_end=1103,
 )
 
 
@@ -435,8 +435,8 @@ _READCONTENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1098,
-  serialized_end=1216,
+  serialized_start=1105,
+  serialized_end=1223,
 )
 
 
@@ -474,8 +474,8 @@ _READCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1218,
-  serialized_end=1269,
+  serialized_start=1225,
+  serialized_end=1276,
 )
 
 
@@ -541,8 +541,8 @@ _STATUS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1272,
-  serialized_end=1510,
+  serialized_start=1279,
+  serialized_end=1517,
 )
 
 
@@ -573,8 +573,8 @@ _STATUSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1512,
-  serialized_end=1540,
+  serialized_start=1519,
+  serialized_end=1547,
 )
 
 
@@ -605,8 +605,8 @@ _STATUSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1542,
-  serialized_end=1614,
+  serialized_start=1549,
+  serialized_end=1621,
 )
 
 
@@ -637,8 +637,8 @@ _LISTSTATUSESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1616,
-  serialized_end=1654,
+  serialized_start=1623,
+  serialized_end=1661,
 )
 
 
@@ -669,8 +669,8 @@ _LISTSTATUSESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1656,
-  serialized_end=1742,
+  serialized_start=1663,
+  serialized_end=1749,
 )
 
 
@@ -708,8 +708,8 @@ _WRITECONTENTREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=482,
-  serialized_end=527,
+  serialized_start=489,
+  serialized_end=534,
 )
 
 _WRITECONTENTREQUEST = _descriptor.Descriptor(
@@ -781,8 +781,8 @@ _WRITECONTENTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1745,
-  serialized_end=2083,
+  serialized_start=1752,
+  serialized_end=2090,
 )
 
 
@@ -848,8 +848,8 @@ _WRITECONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2086,
-  serialized_end=2384,
+  serialized_start=2093,
+  serialized_end=2391,
 )
 
 
@@ -880,8 +880,8 @@ _ABORTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2386,
-  serialized_end=2413,
+  serialized_start=2393,
+  serialized_end=2420,
 )
 
 _INFO_LABELSENTRY.containing_type = _INFO
@@ -1100,8 +1100,8 @@ _CONTENT = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2552,
-  serialized_end=3510,
+  serialized_start=2559,
+  serialized_end=3517,
   methods=[
   _descriptor.MethodDescriptor(
     name='Info',

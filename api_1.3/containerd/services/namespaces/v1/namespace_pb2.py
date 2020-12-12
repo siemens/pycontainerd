@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZFgithub.com/containerd/containerd/api/services/namespaces/v1;namespaces',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n1containerd/services/namespaces/v1/namespace.proto\x12!containerd.services.namespaces.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\"\x92\x01\n\tNamespace\x12\x0c\n\x04name\x18\x01 \x01(\t\x12H\n\x06labels\x18\x02 \x03(\x0b\x32\x38.containerd.services.namespaces.v1.Namespace.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"#\n\x13GetNamespaceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"]\n\x14GetNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"\'\n\x15ListNamespacesRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"`\n\x16ListNamespacesResponse\x12\x46\n\nnamespaces\x18\x01 \x03(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"_\n\x16\x43reateNamespaceRequest\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"`\n\x17\x43reateNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"\x90\x01\n\x16UpdateNamespaceRequest\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"`\n\x17UpdateNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"&\n\x16\x44\x65leteNamespaceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t2\xe0\x04\n\nNamespaces\x12v\n\x03Get\x12\x36.containerd.services.namespaces.v1.GetNamespaceRequest\x1a\x37.containerd.services.namespaces.v1.GetNamespaceResponse\x12{\n\x04List\x12\x38.containerd.services.namespaces.v1.ListNamespacesRequest\x1a\x39.containerd.services.namespaces.v1.ListNamespacesResponse\x12\x7f\n\x06\x43reate\x12\x39.containerd.services.namespaces.v1.CreateNamespaceRequest\x1a:.containerd.services.namespaces.v1.CreateNamespaceResponse\x12\x7f\n\x06Update\x12\x39.containerd.services.namespaces.v1.UpdateNamespaceRequest\x1a:.containerd.services.namespaces.v1.UpdateNamespaceResponse\x12[\n\x06\x44\x65lete\x12\x39.containerd.services.namespaces.v1.DeleteNamespaceRequest\x1a\x16.google.protobuf.EmptyBHZFgithub.com/containerd/containerd/api/services/namespaces/v1;namespacesX\x00\x62\x06proto3'
+  serialized_pb=b'\n1containerd/services/namespaces/v1/namespace.proto\x12!containerd.services.namespaces.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\"\x92\x01\n\tNamespace\x12\x0c\n\x04name\x18\x01 \x01(\t\x12H\n\x06labels\x18\x02 \x03(\x0b\x32\x38.containerd.services.namespaces.v1.Namespace.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"#\n\x13GetNamespaceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"]\n\x14GetNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"\'\n\x15ListNamespacesRequest\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\"`\n\x16ListNamespacesResponse\x12\x46\n\nnamespaces\x18\x01 \x03(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"_\n\x16\x43reateNamespaceRequest\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"`\n\x17\x43reateNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"\x90\x01\n\x16UpdateNamespaceRequest\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"`\n\x17UpdateNamespaceResponse\x12\x45\n\tnamespace\x18\x01 \x01(\x0b\x32,.containerd.services.namespaces.v1.NamespaceB\x04\xc8\xde\x1f\x00\"&\n\x16\x44\x65leteNamespaceRequest\x12\x0c\n\x04name\x18\x01 \x01(\t2\xe0\x04\n\nNamespaces\x12v\n\x03Get\x12\x36.containerd.services.namespaces.v1.GetNamespaceRequest\x1a\x37.containerd.services.namespaces.v1.GetNamespaceResponse\x12{\n\x04List\x12\x38.containerd.services.namespaces.v1.ListNamespacesRequest\x1a\x39.containerd.services.namespaces.v1.ListNamespacesResponse\x12\x7f\n\x06\x43reate\x12\x39.containerd.services.namespaces.v1.CreateNamespaceRequest\x1a:.containerd.services.namespaces.v1.CreateNamespaceResponse\x12\x7f\n\x06Update\x12\x39.containerd.services.namespaces.v1.UpdateNamespaceRequest\x1a:.containerd.services.namespaces.v1.UpdateNamespaceResponse\x12[\n\x06\x44\x65lete\x12\x39.containerd.services.namespaces.v1.DeleteNamespaceRequest\x1a\x16.google.protobuf.EmptyBHZFgithub.com/containerd/containerd/api/services/namespaces/v1;namespacesX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +63,8 @@ _NAMESPACE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=286,
-  serialized_end=331,
+  serialized_start=293,
+  serialized_end=338,
 )
 
 _NAMESPACE = _descriptor.Descriptor(
@@ -101,8 +101,8 @@ _NAMESPACE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=185,
-  serialized_end=331,
+  serialized_start=192,
+  serialized_end=338,
 )
 
 
@@ -133,8 +133,8 @@ _GETNAMESPACEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=333,
-  serialized_end=368,
+  serialized_start=340,
+  serialized_end=375,
 )
 
 
@@ -165,8 +165,8 @@ _GETNAMESPACERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=370,
-  serialized_end=463,
+  serialized_start=377,
+  serialized_end=470,
 )
 
 
@@ -197,8 +197,8 @@ _LISTNAMESPACESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=465,
-  serialized_end=504,
+  serialized_start=472,
+  serialized_end=511,
 )
 
 
@@ -229,8 +229,8 @@ _LISTNAMESPACESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=506,
-  serialized_end=602,
+  serialized_start=513,
+  serialized_end=609,
 )
 
 
@@ -261,8 +261,8 @@ _CREATENAMESPACEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=604,
-  serialized_end=699,
+  serialized_start=611,
+  serialized_end=706,
 )
 
 
@@ -293,8 +293,8 @@ _CREATENAMESPACERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=701,
-  serialized_end=797,
+  serialized_start=708,
+  serialized_end=804,
 )
 
 
@@ -332,8 +332,8 @@ _UPDATENAMESPACEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=800,
-  serialized_end=944,
+  serialized_start=807,
+  serialized_end=951,
 )
 
 
@@ -364,8 +364,8 @@ _UPDATENAMESPACERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=946,
-  serialized_end=1042,
+  serialized_start=953,
+  serialized_end=1049,
 )
 
 
@@ -396,8 +396,8 @@ _DELETENAMESPACEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1044,
-  serialized_end=1082,
+  serialized_start=1051,
+  serialized_end=1089,
 )
 
 _NAMESPACE_LABELSENTRY.containing_type = _NAMESPACE
@@ -516,8 +516,8 @@ _NAMESPACES = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1085,
-  serialized_end=1693,
+  serialized_start=1092,
+  serialized_end=1700,
   methods=[
   _descriptor.MethodDescriptor(
     name='Get',

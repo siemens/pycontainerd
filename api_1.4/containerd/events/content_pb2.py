@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from containerd.protobuf.plugin import fieldpath_pb2 as containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2
 
 
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z2github.com/containerd/containerd/api/events;events\240\364\036\001',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x63ontainerd/events/content.proto\x12\x11\x63ontainerd.events\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"S\n\rContentDelete\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x42\x38Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x01\x62\x06proto3'
+  serialized_pb=b'\n\x1f\x63ontainerd/events/content.proto\x12\x11\x63ontainerd.events\x1a&containerd/vendor/gogoproto/gogo.proto\x1a*containerd/protobuf/plugin/fieldpath.proto\"S\n\rContentDelete\x12\x42\n\x06\x64igest\x18\x01 \x01(\tB2\xda\xde\x1f*github.com/opencontainers/go-digest.Digest\xc8\xde\x1f\x00\x42\x38Z2github.com/containerd/containerd/api/events;events\xa0\xf4\x1e\x01X\x00X\x01\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,])
 
 
 
@@ -55,8 +55,8 @@ _CONTENTDELETE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=131,
-  serialized_end=214,
+  serialized_start=138,
+  serialized_end=221,
 )
 
 DESCRIPTOR.message_types_by_name['ContentDelete'] = _CONTENTDELETE

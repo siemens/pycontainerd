@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
@@ -22,9 +22,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/containerd/containerd/api/services/leases/v1;leases',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n*containerd/services/leases/v1/leases.proto\x12\x1d\x63ontainerd.services.leases.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xbe\x01\n\x05Lease\x12\n\n\x02id\x18\x01 \x01(\t\x12\x38\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12@\n\x06labels\x18\x03 \x03(\x0b\x32\x30.containerd.services.leases.v1.Lease.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x94\x01\n\rCreateRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12H\n\x06labels\x18\x03 \x03(\x0b\x32\x38.containerd.services.leases.v1.CreateRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"E\n\x0e\x43reateResponse\x12\x33\n\x05lease\x18\x01 \x01(\x0b\x32$.containerd.services.leases.v1.Lease\")\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04sync\x18\x02 \x01(\x08\"\x1e\n\x0bListRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"D\n\x0cListResponse\x12\x34\n\x06leases\x18\x01 \x03(\x0b\x32$.containerd.services.leases.v1.Lease\"$\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"a\n\x12\x41\x64\x64ResourceRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12?\n\x08resource\x18\x02 \x01(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\"d\n\x15\x44\x65leteResourceRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12?\n\x08resource\x18\x02 \x01(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\"\"\n\x14ListResourcesRequest\x12\n\n\x02id\x18\x01 \x01(\t\"Y\n\x15ListResourcesResponse\x12@\n\tresources\x18\x01 \x03(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\x32\xd6\x04\n\x06Leases\x12\x65\n\x06\x43reate\x12,.containerd.services.leases.v1.CreateRequest\x1a-.containerd.services.leases.v1.CreateResponse\x12N\n\x06\x44\x65lete\x12,.containerd.services.leases.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\x12_\n\x04List\x12*.containerd.services.leases.v1.ListRequest\x1a+.containerd.services.leases.v1.ListResponse\x12X\n\x0b\x41\x64\x64Resource\x12\x31.containerd.services.leases.v1.AddResourceRequest\x1a\x16.google.protobuf.Empty\x12^\n\x0e\x44\x65leteResource\x12\x34.containerd.services.leases.v1.DeleteResourceRequest\x1a\x16.google.protobuf.Empty\x12z\n\rListResources\x12\x33.containerd.services.leases.v1.ListResourcesRequest\x1a\x34.containerd.services.leases.v1.ListResourcesResponseB@Z>github.com/containerd/containerd/api/services/leases/v1;leasesX\x00\x62\x06proto3'
+  serialized_pb=b'\n*containerd/services/leases/v1/leases.proto\x12\x1d\x63ontainerd.services.leases.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xbe\x01\n\x05Lease\x12\n\n\x02id\x18\x01 \x01(\t\x12\x38\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12@\n\x06labels\x18\x03 \x03(\x0b\x32\x30.containerd.services.leases.v1.Lease.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x94\x01\n\rCreateRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12H\n\x06labels\x18\x03 \x03(\x0b\x32\x38.containerd.services.leases.v1.CreateRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"E\n\x0e\x43reateResponse\x12\x33\n\x05lease\x18\x01 \x01(\x0b\x32$.containerd.services.leases.v1.Lease\")\n\rDeleteRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04sync\x18\x02 \x01(\x08\"\x1e\n\x0bListRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"D\n\x0cListResponse\x12\x34\n\x06leases\x18\x01 \x03(\x0b\x32$.containerd.services.leases.v1.Lease\"$\n\x08Resource\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\"a\n\x12\x41\x64\x64ResourceRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12?\n\x08resource\x18\x02 \x01(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\"d\n\x15\x44\x65leteResourceRequest\x12\n\n\x02id\x18\x01 \x01(\t\x12?\n\x08resource\x18\x02 \x01(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\"\"\n\x14ListResourcesRequest\x12\n\n\x02id\x18\x01 \x01(\t\"Y\n\x15ListResourcesResponse\x12@\n\tresources\x18\x01 \x03(\x0b\x32\'.containerd.services.leases.v1.ResourceB\x04\xc8\xde\x1f\x00\x32\xd6\x04\n\x06Leases\x12\x65\n\x06\x43reate\x12,.containerd.services.leases.v1.CreateRequest\x1a-.containerd.services.leases.v1.CreateResponse\x12N\n\x06\x44\x65lete\x12,.containerd.services.leases.v1.DeleteRequest\x1a\x16.google.protobuf.Empty\x12_\n\x04List\x12*.containerd.services.leases.v1.ListRequest\x1a+.containerd.services.leases.v1.ListResponse\x12X\n\x0b\x41\x64\x64Resource\x12\x31.containerd.services.leases.v1.AddResourceRequest\x1a\x16.google.protobuf.Empty\x12^\n\x0e\x44\x65leteResource\x12\x34.containerd.services.leases.v1.DeleteResourceRequest\x1a\x16.google.protobuf.Empty\x12z\n\rListResources\x12\x33.containerd.services.leases.v1.ListResourcesRequest\x1a\x34.containerd.services.leases.v1.ListResourcesResponseB@Z>github.com/containerd/containerd/api/services/leases/v1;leasesX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -63,8 +63,8 @@ _LEASE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=363,
+  serialized_start=325,
+  serialized_end=370,
 )
 
 _LEASE = _descriptor.Descriptor(
@@ -108,8 +108,8 @@ _LEASE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=173,
-  serialized_end=363,
+  serialized_start=180,
+  serialized_end=370,
 )
 
 
@@ -147,8 +147,8 @@ _CREATEREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=318,
-  serialized_end=363,
+  serialized_start=325,
+  serialized_end=370,
 )
 
 _CREATEREQUEST = _descriptor.Descriptor(
@@ -185,8 +185,8 @@ _CREATEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=366,
-  serialized_end=514,
+  serialized_start=373,
+  serialized_end=521,
 )
 
 
@@ -217,8 +217,8 @@ _CREATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=516,
-  serialized_end=585,
+  serialized_start=523,
+  serialized_end=592,
 )
 
 
@@ -256,8 +256,8 @@ _DELETEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=587,
-  serialized_end=628,
+  serialized_start=594,
+  serialized_end=635,
 )
 
 
@@ -288,8 +288,8 @@ _LISTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=630,
-  serialized_end=660,
+  serialized_start=637,
+  serialized_end=667,
 )
 
 
@@ -320,8 +320,8 @@ _LISTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=662,
-  serialized_end=730,
+  serialized_start=669,
+  serialized_end=737,
 )
 
 
@@ -359,8 +359,8 @@ _RESOURCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=732,
-  serialized_end=768,
+  serialized_start=739,
+  serialized_end=775,
 )
 
 
@@ -398,8 +398,8 @@ _ADDRESOURCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=770,
-  serialized_end=867,
+  serialized_start=777,
+  serialized_end=874,
 )
 
 
@@ -437,8 +437,8 @@ _DELETERESOURCEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=869,
-  serialized_end=969,
+  serialized_start=876,
+  serialized_end=976,
 )
 
 
@@ -469,8 +469,8 @@ _LISTRESOURCESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=971,
-  serialized_end=1005,
+  serialized_start=978,
+  serialized_end=1012,
 )
 
 
@@ -501,8 +501,8 @@ _LISTRESOURCESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1007,
-  serialized_end=1096,
+  serialized_start=1014,
+  serialized_end=1103,
 )
 
 _LEASE_LABELSENTRY.containing_type = _LEASE
@@ -637,8 +637,8 @@ _LEASES = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1099,
-  serialized_end=1697,
+  serialized_start=1106,
+  serialized_end=1704,
   methods=[
   _descriptor.MethodDescriptor(
     name='Create',

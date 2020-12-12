@@ -12,7 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -21,9 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z@github.com/containerd/containerd/api/services/version/v1;version',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n,containerd/services/version/v1/version.proto\x12\x1e\x63ontainerd.services.version.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\"4\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x10\n\x08revision\x18\x02 \x01(\t2]\n\x07Version\x12R\n\x07Version\x12\x16.google.protobuf.Empty\x1a/.containerd.services.version.v1.VersionResponseBBZ@github.com/containerd/containerd/api/services/version/v1;versionX\x01\x62\x06proto3'
+  serialized_pb=b'\n,containerd/services/version/v1/version.proto\x12\x1e\x63ontainerd.services.version.v1\x1a\x1bgoogle/protobuf/empty.proto\x1a&containerd/vendor/gogoproto/gogo.proto\"4\n\x0fVersionResponse\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x10\n\x08revision\x18\x02 \x01(\t2]\n\x07Version\x12R\n\x07Version\x12\x16.google.protobuf.Empty\x1a/.containerd.services.version.v1.VersionResponseBBZ@github.com/containerd/containerd/api/services/version/v1;versionX\x01\x62\x06proto3'
   ,
-  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
 
 
@@ -62,8 +62,8 @@ _VERSIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=142,
-  serialized_end=194,
+  serialized_start=149,
+  serialized_end=201,
 )
 
 DESCRIPTOR.message_types_by_name['VersionResponse'] = _VERSIONRESPONSE
@@ -86,8 +86,8 @@ _VERSION = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=196,
-  serialized_end=289,
+  serialized_start=203,
+  serialized_end=296,
   methods=[
   _descriptor.MethodDescriptor(
     name='Version',

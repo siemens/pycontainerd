@@ -12,7 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from containerd.protobuf.plugin import fieldpath_pb2 as containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZDgithub.com/containerd/containerd/api/services/ttrpc/events/v1;events',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n0containerd/services/ttrpc/events/v1/events.proto\x12#containerd.services.events.ttrpc.v1\x1a*containerd/protobuf/plugin/fieldpath.proto\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x0e\x46orwardRequest\x12?\n\x08\x65nvelope\x18\x01 \x01(\x0b\x32-.containerd.services.events.ttrpc.v1.Envelope\"\x90\x01\n\x08\x45nvelope\x12\x37\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x11\n\tnamespace\x18\x02 \x01(\t\x12\r\n\x05topic\x18\x03 \x01(\t\x12#\n\x05\x65vent\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any:\x04\x80\xb9\x1f\x01\x32`\n\x06\x45vents\x12V\n\x07\x46orward\x12\x33.containerd.services.events.ttrpc.v1.ForwardRequest\x1a\x16.google.protobuf.EmptyBFZDgithub.com/containerd/containerd/api/services/ttrpc/events/v1;eventsX\x00X\x01\x62\x06proto3'
+  serialized_pb=b'\n0containerd/services/ttrpc/events/v1/events.proto\x12#containerd.services.events.ttrpc.v1\x1a*containerd/protobuf/plugin/fieldpath.proto\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"Q\n\x0e\x46orwardRequest\x12?\n\x08\x65nvelope\x18\x01 \x01(\x0b\x32-.containerd.services.events.ttrpc.v1.Envelope\"\x90\x01\n\x08\x45nvelope\x12\x37\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x11\n\tnamespace\x18\x02 \x01(\t\x12\r\n\x05topic\x18\x03 \x01(\t\x12#\n\x05\x65vent\x18\x04 \x01(\x0b\x32\x14.google.protobuf.Any:\x04\x80\xb9\x1f\x01\x32`\n\x06\x45vents\x12V\n\x07\x46orward\x12\x33.containerd.services.events.ttrpc.v1.ForwardRequest\x1a\x16.google.protobuf.EmptyBFZDgithub.com/containerd/containerd/api/services/ttrpc/events/v1;eventsX\x00X\x01\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_protobuf_dot_plugin_dot_fieldpath__pb2.DESCRIPTOR,containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -58,8 +58,8 @@ _FORWARDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=255,
-  serialized_end=336,
+  serialized_start=262,
+  serialized_end=343,
 )
 
 
@@ -111,8 +111,8 @@ _ENVELOPE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=339,
-  serialized_end=483,
+  serialized_start=346,
+  serialized_end=490,
 )
 
 _FORWARDREQUEST.fields_by_name['envelope'].message_type = _ENVELOPE
@@ -148,8 +148,8 @@ _EVENTS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=485,
-  serialized_end=581,
+  serialized_start=492,
+  serialized_end=588,
   methods=[
   _descriptor.MethodDescriptor(
     name='Forward',

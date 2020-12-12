@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z>github.com/containerd/containerd/api/services/images/v1;images',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n*containerd/services/images/v1/images.proto\x12\x1d\x63ontainerd.services.images.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a!containerd/types/descriptor.proto\"\xae\x02\n\x05Image\x12\x0c\n\x04name\x18\x01 \x01(\t\x12@\n\x06labels\x18\x02 \x03(\x0b\x32\x30.containerd.services.images.v1.Image.LabelsEntry\x12\x32\n\x06target\x18\x03 \x01(\x0b\x32\x1c.containerd.types.DescriptorB\x04\xc8\xde\x1f\x00\x12\x38\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1f\n\x0fGetImageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x10GetImageResponse\x12\x33\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.Image\"O\n\x12\x43reateImageRequest\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"P\n\x13\x43reateImageResponse\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"\x80\x01\n\x12UpdateImageRequest\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"P\n\x13UpdateImageResponse\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"$\n\x11ListImagesRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"P\n\x12ListImagesResponse\x12:\n\x06images\x18\x01 \x03(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"0\n\x12\x44\x65leteImageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04sync\x18\x02 \x01(\x08\x32\x94\x04\n\x06Images\x12\x66\n\x03Get\x12..containerd.services.images.v1.GetImageRequest\x1a/.containerd.services.images.v1.GetImageResponse\x12k\n\x04List\x12\x30.containerd.services.images.v1.ListImagesRequest\x1a\x31.containerd.services.images.v1.ListImagesResponse\x12o\n\x06\x43reate\x12\x31.containerd.services.images.v1.CreateImageRequest\x1a\x32.containerd.services.images.v1.CreateImageResponse\x12o\n\x06Update\x12\x31.containerd.services.images.v1.UpdateImageRequest\x1a\x32.containerd.services.images.v1.UpdateImageResponse\x12S\n\x06\x44\x65lete\x12\x31.containerd.services.images.v1.DeleteImageRequest\x1a\x16.google.protobuf.EmptyB@Z>github.com/containerd/containerd/api/services/images/v1;imagesX\x00\x62\x06proto3'
+  serialized_pb=b'\n*containerd/services/images/v1/images.proto\x12\x1d\x63ontainerd.services.images.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a!containerd/types/descriptor.proto\"\xae\x02\n\x05Image\x12\x0c\n\x04name\x18\x01 \x01(\t\x12@\n\x06labels\x18\x02 \x03(\x0b\x32\x30.containerd.services.images.v1.Image.LabelsEntry\x12\x32\n\x06target\x18\x03 \x01(\x0b\x32\x1c.containerd.types.DescriptorB\x04\xc8\xde\x1f\x00\x12\x38\n\ncreated_at\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x1f\n\x0fGetImageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"G\n\x10GetImageResponse\x12\x33\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.Image\"O\n\x12\x43reateImageRequest\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"P\n\x13\x43reateImageResponse\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"\x80\x01\n\x12UpdateImageRequest\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"P\n\x13UpdateImageResponse\x12\x39\n\x05image\x18\x01 \x01(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"$\n\x11ListImagesRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"P\n\x12ListImagesResponse\x12:\n\x06images\x18\x01 \x03(\x0b\x32$.containerd.services.images.v1.ImageB\x04\xc8\xde\x1f\x00\"0\n\x12\x44\x65leteImageRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04sync\x18\x02 \x01(\x08\x32\x94\x04\n\x06Images\x12\x66\n\x03Get\x12..containerd.services.images.v1.GetImageRequest\x1a/.containerd.services.images.v1.GetImageResponse\x12k\n\x04List\x12\x30.containerd.services.images.v1.ListImagesRequest\x1a\x31.containerd.services.images.v1.ListImagesResponse\x12o\n\x06\x43reate\x12\x31.containerd.services.images.v1.CreateImageRequest\x1a\x32.containerd.services.images.v1.CreateImageResponse\x12o\n\x06Update\x12\x31.containerd.services.images.v1.UpdateImageRequest\x1a\x32.containerd.services.images.v1.UpdateImageResponse\x12S\n\x06\x44\x65lete\x12\x31.containerd.services.images.v1.DeleteImageRequest\x1a\x16.google.protobuf.EmptyB@Z>github.com/containerd/containerd/api/services/images/v1;imagesX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_descriptor__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +65,8 @@ _IMAGE_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=499,
-  serialized_end=544,
+  serialized_start=506,
+  serialized_end=551,
 )
 
 _IMAGE = _descriptor.Descriptor(
@@ -124,8 +124,8 @@ _IMAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=242,
-  serialized_end=544,
+  serialized_start=249,
+  serialized_end=551,
 )
 
 
@@ -156,8 +156,8 @@ _GETIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=546,
-  serialized_end=577,
+  serialized_start=553,
+  serialized_end=584,
 )
 
 
@@ -188,8 +188,8 @@ _GETIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=579,
-  serialized_end=650,
+  serialized_start=586,
+  serialized_end=657,
 )
 
 
@@ -220,8 +220,8 @@ _CREATEIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=731,
+  serialized_start=659,
+  serialized_end=738,
 )
 
 
@@ -252,8 +252,8 @@ _CREATEIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=733,
-  serialized_end=813,
+  serialized_start=740,
+  serialized_end=820,
 )
 
 
@@ -291,8 +291,8 @@ _UPDATEIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=816,
-  serialized_end=944,
+  serialized_start=823,
+  serialized_end=951,
 )
 
 
@@ -323,8 +323,8 @@ _UPDATEIMAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=946,
-  serialized_end=1026,
+  serialized_start=953,
+  serialized_end=1033,
 )
 
 
@@ -355,8 +355,8 @@ _LISTIMAGESREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1028,
-  serialized_end=1064,
+  serialized_start=1035,
+  serialized_end=1071,
 )
 
 
@@ -387,8 +387,8 @@ _LISTIMAGESRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1066,
-  serialized_end=1146,
+  serialized_start=1073,
+  serialized_end=1153,
 )
 
 
@@ -426,8 +426,8 @@ _DELETEIMAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1148,
-  serialized_end=1196,
+  serialized_start=1155,
+  serialized_end=1203,
 )
 
 _IMAGE_LABELSENTRY.containing_type = _IMAGE
@@ -551,8 +551,8 @@ _IMAGES = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1199,
-  serialized_end=1731,
+  serialized_start=1206,
+  serialized_end=1738,
   methods=[
   _descriptor.MethodDescriptor(
     name='Get',

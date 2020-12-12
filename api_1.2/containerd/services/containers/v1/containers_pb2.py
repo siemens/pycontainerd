@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
@@ -24,9 +24,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZFgithub.com/containerd/containerd/api/services/containers/v1;containers',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n2containerd/services/containers/v1/containers.proto\x12!containerd.services.containers.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8a\x05\n\tContainer\x12\n\n\x02id\x18\x01 \x01(\t\x12H\n\x06labels\x18\x02 \x03(\x0b\x32\x38.containerd.services.containers.v1.Container.LabelsEntry\x12\r\n\x05image\x18\x03 \x01(\t\x12\x45\n\x07runtime\x18\x04 \x01(\x0b\x32\x34.containerd.services.containers.v1.Container.Runtime\x12\"\n\x04spec\x18\x05 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x13\n\x0bsnapshotter\x18\x06 \x01(\t\x12\x14\n\x0csnapshot_key\x18\x07 \x01(\t\x12\x38\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12V\n\nextensions\x18\n \x03(\x0b\x32<.containerd.services.containers.v1.Container.ExtensionsEntryB\x04\xc8\xde\x1f\x00\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a>\n\x07Runtime\x12\x0c\n\x04name\x18\x01 \x01(\t\x12%\n\x07options\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x1aG\n\x0f\x45xtensionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any:\x02\x38\x01\"!\n\x13GetContainerRequest\x12\n\n\x02id\x18\x01 \x01(\t\"]\n\x14GetContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"(\n\x15ListContainersRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"`\n\x16ListContainersResponse\x12\x46\n\ncontainers\x18\x01 \x03(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"_\n\x16\x43reateContainerRequest\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"`\n\x17\x43reateContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"\x90\x01\n\x16UpdateContainerRequest\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"`\n\x17UpdateContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"$\n\x16\x44\x65leteContainerRequest\x12\n\n\x02id\x18\x01 \x01(\t\"W\n\x14ListContainerMessage\x12?\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.Container2\xe4\x05\n\nContainers\x12v\n\x03Get\x12\x36.containerd.services.containers.v1.GetContainerRequest\x1a\x37.containerd.services.containers.v1.GetContainerResponse\x12{\n\x04List\x12\x38.containerd.services.containers.v1.ListContainersRequest\x1a\x39.containerd.services.containers.v1.ListContainersResponse\x12\x81\x01\n\nListStream\x12\x38.containerd.services.containers.v1.ListContainersRequest\x1a\x37.containerd.services.containers.v1.ListContainerMessage0\x01\x12\x7f\n\x06\x43reate\x12\x39.containerd.services.containers.v1.CreateContainerRequest\x1a:.containerd.services.containers.v1.CreateContainerResponse\x12\x7f\n\x06Update\x12\x39.containerd.services.containers.v1.UpdateContainerRequest\x1a:.containerd.services.containers.v1.UpdateContainerResponse\x12[\n\x06\x44\x65lete\x12\x39.containerd.services.containers.v1.DeleteContainerRequest\x1a\x16.google.protobuf.EmptyBHZFgithub.com/containerd/containerd/api/services/containers/v1;containersX\x00\x62\x06proto3'
+  serialized_pb=b'\n2containerd/services/containers/v1/containers.proto\x12!containerd.services.containers.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x8a\x05\n\tContainer\x12\n\n\x02id\x18\x01 \x01(\t\x12H\n\x06labels\x18\x02 \x03(\x0b\x32\x38.containerd.services.containers.v1.Container.LabelsEntry\x12\r\n\x05image\x18\x03 \x01(\t\x12\x45\n\x07runtime\x18\x04 \x01(\x0b\x32\x34.containerd.services.containers.v1.Container.Runtime\x12\"\n\x04spec\x18\x05 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x13\n\x0bsnapshotter\x18\x06 \x01(\t\x12\x14\n\x0csnapshot_key\x18\x07 \x01(\t\x12\x38\n\ncreated_at\x18\x08 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12V\n\nextensions\x18\n \x03(\x0b\x32<.containerd.services.containers.v1.Container.ExtensionsEntryB\x04\xc8\xde\x1f\x00\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a>\n\x07Runtime\x12\x0c\n\x04name\x18\x01 \x01(\t\x12%\n\x07options\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x1aG\n\x0f\x45xtensionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12#\n\x05value\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any:\x02\x38\x01\"!\n\x13GetContainerRequest\x12\n\n\x02id\x18\x01 \x01(\t\"]\n\x14GetContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"(\n\x15ListContainersRequest\x12\x0f\n\x07\x66ilters\x18\x01 \x03(\t\"`\n\x16ListContainersResponse\x12\x46\n\ncontainers\x18\x01 \x03(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"_\n\x16\x43reateContainerRequest\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"`\n\x17\x43reateContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"\x90\x01\n\x16UpdateContainerRequest\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"`\n\x17UpdateContainerResponse\x12\x45\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.ContainerB\x04\xc8\xde\x1f\x00\"$\n\x16\x44\x65leteContainerRequest\x12\n\n\x02id\x18\x01 \x01(\t\"W\n\x14ListContainerMessage\x12?\n\tcontainer\x18\x01 \x01(\x0b\x32,.containerd.services.containers.v1.Container2\xe4\x05\n\nContainers\x12v\n\x03Get\x12\x36.containerd.services.containers.v1.GetContainerRequest\x1a\x37.containerd.services.containers.v1.GetContainerResponse\x12{\n\x04List\x12\x38.containerd.services.containers.v1.ListContainersRequest\x1a\x39.containerd.services.containers.v1.ListContainersResponse\x12\x81\x01\n\nListStream\x12\x38.containerd.services.containers.v1.ListContainersRequest\x1a\x37.containerd.services.containers.v1.ListContainerMessage0\x01\x12\x7f\n\x06\x43reate\x12\x39.containerd.services.containers.v1.CreateContainerRequest\x1a:.containerd.services.containers.v1.CreateContainerResponse\x12\x7f\n\x06Update\x12\x39.containerd.services.containers.v1.UpdateContainerRequest\x1a:.containerd.services.containers.v1.UpdateContainerResponse\x12[\n\x06\x44\x65lete\x12\x39.containerd.services.containers.v1.DeleteContainerRequest\x1a\x16.google.protobuf.EmptyBHZFgithub.com/containerd/containerd/api/services/containers/v1;containersX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 
 
@@ -65,8 +65,8 @@ _CONTAINER_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=714,
-  serialized_end=759,
+  serialized_start=721,
+  serialized_end=766,
 )
 
 _CONTAINER_RUNTIME = _descriptor.Descriptor(
@@ -103,8 +103,8 @@ _CONTAINER_RUNTIME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=761,
-  serialized_end=823,
+  serialized_start=768,
+  serialized_end=830,
 )
 
 _CONTAINER_EXTENSIONSENTRY = _descriptor.Descriptor(
@@ -141,8 +141,8 @@ _CONTAINER_EXTENSIONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=825,
-  serialized_end=896,
+  serialized_start=832,
+  serialized_end=903,
 )
 
 _CONTAINER = _descriptor.Descriptor(
@@ -235,8 +235,8 @@ _CONTAINER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=246,
-  serialized_end=896,
+  serialized_start=253,
+  serialized_end=903,
 )
 
 
@@ -267,8 +267,8 @@ _GETCONTAINERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=898,
-  serialized_end=931,
+  serialized_start=905,
+  serialized_end=938,
 )
 
 
@@ -299,8 +299,8 @@ _GETCONTAINERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=933,
-  serialized_end=1026,
+  serialized_start=940,
+  serialized_end=1033,
 )
 
 
@@ -331,8 +331,8 @@ _LISTCONTAINERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1028,
-  serialized_end=1068,
+  serialized_start=1035,
+  serialized_end=1075,
 )
 
 
@@ -363,8 +363,8 @@ _LISTCONTAINERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1070,
-  serialized_end=1166,
+  serialized_start=1077,
+  serialized_end=1173,
 )
 
 
@@ -395,8 +395,8 @@ _CREATECONTAINERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1168,
-  serialized_end=1263,
+  serialized_start=1175,
+  serialized_end=1270,
 )
 
 
@@ -427,8 +427,8 @@ _CREATECONTAINERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1265,
-  serialized_end=1361,
+  serialized_start=1272,
+  serialized_end=1368,
 )
 
 
@@ -466,8 +466,8 @@ _UPDATECONTAINERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1364,
-  serialized_end=1508,
+  serialized_start=1371,
+  serialized_end=1515,
 )
 
 
@@ -498,8 +498,8 @@ _UPDATECONTAINERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1510,
-  serialized_end=1606,
+  serialized_start=1517,
+  serialized_end=1613,
 )
 
 
@@ -530,8 +530,8 @@ _DELETECONTAINERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1608,
-  serialized_end=1644,
+  serialized_start=1615,
+  serialized_end=1651,
 )
 
 
@@ -562,8 +562,8 @@ _LISTCONTAINERMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1646,
-  serialized_end=1733,
+  serialized_start=1653,
+  serialized_end=1740,
 )
 
 _CONTAINER_LABELSENTRY.containing_type = _CONTAINER
@@ -720,8 +720,8 @@ _CONTAINERS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1736,
-  serialized_end=2476,
+  serialized_start=1743,
+  serialized_end=2483,
   methods=[
   _descriptor.MethodDescriptor(
     name='Get',

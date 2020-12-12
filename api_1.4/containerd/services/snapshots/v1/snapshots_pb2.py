@@ -12,7 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 from google.protobuf import field_mask_pb2 as google_dot_protobuf_dot_field__mask__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
@@ -25,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'ZDgithub.com/containerd/containerd/api/services/snapshots/v1;snapshots',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n0containerd/services/snapshots/v1/snapshots.proto\x12 containerd.services.snapshots.v1\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1c\x63ontainerd/types/mount.proto\"\xcf\x01\n\x16PrepareSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x0e\n\x06parent\x18\x03 \x01(\t\x12T\n\x06labels\x18\x04 \x03(\x0b\x32\x44.containerd.services.snapshots.v1.PrepareSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"B\n\x17PrepareSnapshotResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"\xc9\x01\n\x13ViewSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x0e\n\x06parent\x18\x03 \x01(\t\x12Q\n\x06labels\x18\x04 \x03(\x0b\x32\x41.containerd.services.snapshots.v1.ViewSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"?\n\x14ViewSnapshotResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"1\n\rMountsRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"9\n\x0eMountsResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"9\n\x15RemoveSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\xcb\x01\n\x15\x43ommitSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12S\n\x06labels\x18\x04 \x03(\x0b\x32\x43.containerd.services.snapshots.v1.CommitSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"7\n\x13StatSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\xc1\x02\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\x12\x34\n\x04kind\x18\x03 \x01(\x0e\x32&.containerd.services.snapshots.v1.Kind\x12\x38\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x42\n\x06labels\x18\x06 \x03(\x0b\x32\x32.containerd.services.snapshots.v1.Info.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"R\n\x14StatSnapshotResponse\x12:\n\x04info\x18\x01 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"\x99\x01\n\x15UpdateSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12:\n\x04info\x18\x02 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"T\n\x16UpdateSnapshotResponse\x12:\n\x04info\x18\x01 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"<\n\x14ListSnapshotsRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0f\n\x07\x66ilters\x18\x02 \x03(\t\"S\n\x15ListSnapshotsResponse\x12:\n\x04info\x18\x01 \x03(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"0\n\x0cUsageRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"-\n\rUsageResponse\x12\x0c\n\x04size\x18\x01 \x01(\x03\x12\x0e\n\x06inodes\x18\x02 \x01(\x03\"%\n\x0e\x43leanupRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t*\x88\x01\n\x04Kind\x12\x1c\n\x07UNKNOWN\x10\x00\x1a\x0f\x8a\x9d \x0bKindUnknown\x12\x16\n\x04VIEW\x10\x01\x1a\x0c\x8a\x9d \x08KindView\x12\x1a\n\x06\x41\x43TIVE\x10\x02\x1a\x0e\x8a\x9d \nKindActive\x12 \n\tCOMMITTED\x10\x03\x1a\x11\x8a\x9d \rKindCommitted\x1a\x0c\x88\xa3\x1e\x00\xba\xa4\x1e\x04Kind2\xd3\x08\n\tSnapshots\x12~\n\x07Prepare\x12\x38.containerd.services.snapshots.v1.PrepareSnapshotRequest\x1a\x39.containerd.services.snapshots.v1.PrepareSnapshotResponse\x12u\n\x04View\x12\x35.containerd.services.snapshots.v1.ViewSnapshotRequest\x1a\x36.containerd.services.snapshots.v1.ViewSnapshotResponse\x12k\n\x06Mounts\x12/.containerd.services.snapshots.v1.MountsRequest\x1a\x30.containerd.services.snapshots.v1.MountsResponse\x12Y\n\x06\x43ommit\x12\x37.containerd.services.snapshots.v1.CommitSnapshotRequest\x1a\x16.google.protobuf.Empty\x12Y\n\x06Remove\x12\x37.containerd.services.snapshots.v1.RemoveSnapshotRequest\x1a\x16.google.protobuf.Empty\x12u\n\x04Stat\x12\x35.containerd.services.snapshots.v1.StatSnapshotRequest\x1a\x36.containerd.services.snapshots.v1.StatSnapshotResponse\x12{\n\x06Update\x12\x37.containerd.services.snapshots.v1.UpdateSnapshotRequest\x1a\x38.containerd.services.snapshots.v1.UpdateSnapshotResponse\x12y\n\x04List\x12\x36.containerd.services.snapshots.v1.ListSnapshotsRequest\x1a\x37.containerd.services.snapshots.v1.ListSnapshotsResponse0\x01\x12h\n\x05Usage\x12..containerd.services.snapshots.v1.UsageRequest\x1a/.containerd.services.snapshots.v1.UsageResponse\x12S\n\x07\x43leanup\x12\x30.containerd.services.snapshots.v1.CleanupRequest\x1a\x16.google.protobuf.EmptyBFZDgithub.com/containerd/containerd/api/services/snapshots/v1;snapshotsX\x00\x62\x06proto3'
+  serialized_pb=b'\n0containerd/services/snapshots/v1/snapshots.proto\x12 containerd.services.snapshots.v1\x1a&containerd/vendor/gogoproto/gogo.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a google/protobuf/field_mask.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1c\x63ontainerd/types/mount.proto\"\xcf\x01\n\x16PrepareSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x0e\n\x06parent\x18\x03 \x01(\t\x12T\n\x06labels\x18\x04 \x03(\x0b\x32\x44.containerd.services.snapshots.v1.PrepareSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"B\n\x17PrepareSnapshotResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"\xc9\x01\n\x13ViewSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\x12\x0e\n\x06parent\x18\x03 \x01(\t\x12Q\n\x06labels\x18\x04 \x03(\x0b\x32\x41.containerd.services.snapshots.v1.ViewSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"?\n\x14ViewSnapshotResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"1\n\rMountsRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"9\n\x0eMountsResponse\x12\'\n\x06mounts\x18\x01 \x03(\x0b\x32\x17.containerd.types.Mount\"9\n\x15RemoveSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\xcb\x01\n\x15\x43ommitSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0b\n\x03key\x18\x03 \x01(\t\x12S\n\x06labels\x18\x04 \x03(\x0b\x32\x43.containerd.services.snapshots.v1.CommitSnapshotRequest.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"7\n\x13StatSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\xc1\x02\n\x04Info\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0e\n\x06parent\x18\x02 \x01(\t\x12\x34\n\x04kind\x18\x03 \x01(\x0e\x32&.containerd.services.snapshots.v1.Kind\x12\x38\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x38\n\nupdated_at\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\x90\xdf\x1f\x01\xc8\xde\x1f\x00\x12\x42\n\x06labels\x18\x06 \x03(\x0b\x32\x32.containerd.services.snapshots.v1.Info.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"R\n\x14StatSnapshotResponse\x12:\n\x04info\x18\x01 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"\x99\x01\n\x15UpdateSnapshotRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12:\n\x04info\x18\x02 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\x12/\n\x0bupdate_mask\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"T\n\x16UpdateSnapshotResponse\x12:\n\x04info\x18\x01 \x01(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"<\n\x14ListSnapshotsRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0f\n\x07\x66ilters\x18\x02 \x03(\t\"S\n\x15ListSnapshotsResponse\x12:\n\x04info\x18\x01 \x03(\x0b\x32&.containerd.services.snapshots.v1.InfoB\x04\xc8\xde\x1f\x00\"0\n\x0cUsageRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"-\n\rUsageResponse\x12\x0c\n\x04size\x18\x01 \x01(\x03\x12\x0e\n\x06inodes\x18\x02 \x01(\x03\"%\n\x0e\x43leanupRequest\x12\x13\n\x0bsnapshotter\x18\x01 \x01(\t*\x88\x01\n\x04Kind\x12\x1c\n\x07UNKNOWN\x10\x00\x1a\x0f\x8a\x9d \x0bKindUnknown\x12\x16\n\x04VIEW\x10\x01\x1a\x0c\x8a\x9d \x08KindView\x12\x1a\n\x06\x41\x43TIVE\x10\x02\x1a\x0e\x8a\x9d \nKindActive\x12 \n\tCOMMITTED\x10\x03\x1a\x11\x8a\x9d \rKindCommitted\x1a\x0c\x88\xa3\x1e\x00\xba\xa4\x1e\x04Kind2\xd3\x08\n\tSnapshots\x12~\n\x07Prepare\x12\x38.containerd.services.snapshots.v1.PrepareSnapshotRequest\x1a\x39.containerd.services.snapshots.v1.PrepareSnapshotResponse\x12u\n\x04View\x12\x35.containerd.services.snapshots.v1.ViewSnapshotRequest\x1a\x36.containerd.services.snapshots.v1.ViewSnapshotResponse\x12k\n\x06Mounts\x12/.containerd.services.snapshots.v1.MountsRequest\x1a\x30.containerd.services.snapshots.v1.MountsResponse\x12Y\n\x06\x43ommit\x12\x37.containerd.services.snapshots.v1.CommitSnapshotRequest\x1a\x16.google.protobuf.Empty\x12Y\n\x06Remove\x12\x37.containerd.services.snapshots.v1.RemoveSnapshotRequest\x1a\x16.google.protobuf.Empty\x12u\n\x04Stat\x12\x35.containerd.services.snapshots.v1.StatSnapshotRequest\x1a\x36.containerd.services.snapshots.v1.StatSnapshotResponse\x12{\n\x06Update\x12\x37.containerd.services.snapshots.v1.UpdateSnapshotRequest\x1a\x38.containerd.services.snapshots.v1.UpdateSnapshotResponse\x12y\n\x04List\x12\x36.containerd.services.snapshots.v1.ListSnapshotsRequest\x1a\x37.containerd.services.snapshots.v1.ListSnapshotsResponse0\x01\x12h\n\x05Usage\x12..containerd.services.snapshots.v1.UsageRequest\x1a/.containerd.services.snapshots.v1.UsageResponse\x12S\n\x07\x43leanup\x12\x30.containerd.services.snapshots.v1.CleanupRequest\x1a\x16.google.protobuf.EmptyBFZDgithub.com/containerd/containerd/api/services/snapshots/v1;snapshotsX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,google_dot_protobuf_dot_field__mask__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,containerd_dot_types_dot_mount__pb2.DESCRIPTOR,])
 
 _KIND = _descriptor.EnumDescriptor(
   name='Kind',
@@ -59,8 +59,8 @@ _KIND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=b'\210\243\036\000\272\244\036\004Kind',
-  serialized_start=2158,
-  serialized_end=2294,
+  serialized_start=2165,
+  serialized_end=2301,
 )
 _sym_db.RegisterEnumDescriptor(_KIND)
 
@@ -106,8 +106,8 @@ _PREPARESNAPSHOTREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=453,
+  serialized_start=415,
+  serialized_end=460,
 )
 
 _PREPARESNAPSHOTREQUEST = _descriptor.Descriptor(
@@ -158,8 +158,8 @@ _PREPARESNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=246,
-  serialized_end=453,
+  serialized_start=253,
+  serialized_end=460,
 )
 
 
@@ -190,8 +190,8 @@ _PREPARESNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=455,
-  serialized_end=521,
+  serialized_start=462,
+  serialized_end=528,
 )
 
 
@@ -229,8 +229,8 @@ _VIEWSNAPSHOTREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=453,
+  serialized_start=415,
+  serialized_end=460,
 )
 
 _VIEWSNAPSHOTREQUEST = _descriptor.Descriptor(
@@ -281,8 +281,8 @@ _VIEWSNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=524,
-  serialized_end=725,
+  serialized_start=531,
+  serialized_end=732,
 )
 
 
@@ -313,8 +313,8 @@ _VIEWSNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=727,
-  serialized_end=790,
+  serialized_start=734,
+  serialized_end=797,
 )
 
 
@@ -352,8 +352,8 @@ _MOUNTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=792,
-  serialized_end=841,
+  serialized_start=799,
+  serialized_end=848,
 )
 
 
@@ -384,8 +384,8 @@ _MOUNTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=843,
-  serialized_end=900,
+  serialized_start=850,
+  serialized_end=907,
 )
 
 
@@ -423,8 +423,8 @@ _REMOVESNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=902,
-  serialized_end=959,
+  serialized_start=909,
+  serialized_end=966,
 )
 
 
@@ -462,8 +462,8 @@ _COMMITSNAPSHOTREQUEST_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=453,
+  serialized_start=415,
+  serialized_end=460,
 )
 
 _COMMITSNAPSHOTREQUEST = _descriptor.Descriptor(
@@ -514,8 +514,8 @@ _COMMITSNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=962,
-  serialized_end=1165,
+  serialized_start=969,
+  serialized_end=1172,
 )
 
 
@@ -553,8 +553,8 @@ _STATSNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1167,
-  serialized_end=1222,
+  serialized_start=1174,
+  serialized_end=1229,
 )
 
 
@@ -592,8 +592,8 @@ _INFO_LABELSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=408,
-  serialized_end=453,
+  serialized_start=415,
+  serialized_end=460,
 )
 
 _INFO = _descriptor.Descriptor(
@@ -658,8 +658,8 @@ _INFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1225,
-  serialized_end=1546,
+  serialized_start=1232,
+  serialized_end=1553,
 )
 
 
@@ -690,8 +690,8 @@ _STATSNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1548,
-  serialized_end=1630,
+  serialized_start=1555,
+  serialized_end=1637,
 )
 
 
@@ -736,8 +736,8 @@ _UPDATESNAPSHOTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1633,
-  serialized_end=1786,
+  serialized_start=1640,
+  serialized_end=1793,
 )
 
 
@@ -768,8 +768,8 @@ _UPDATESNAPSHOTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1788,
-  serialized_end=1872,
+  serialized_start=1795,
+  serialized_end=1879,
 )
 
 
@@ -807,8 +807,8 @@ _LISTSNAPSHOTSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1874,
-  serialized_end=1934,
+  serialized_start=1881,
+  serialized_end=1941,
 )
 
 
@@ -839,8 +839,8 @@ _LISTSNAPSHOTSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1936,
-  serialized_end=2019,
+  serialized_start=1943,
+  serialized_end=2026,
 )
 
 
@@ -878,8 +878,8 @@ _USAGEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2021,
-  serialized_end=2069,
+  serialized_start=2028,
+  serialized_end=2076,
 )
 
 
@@ -917,8 +917,8 @@ _USAGERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2071,
-  serialized_end=2116,
+  serialized_start=2078,
+  serialized_end=2123,
 )
 
 
@@ -949,8 +949,8 @@ _CLEANUPREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2118,
-  serialized_end=2155,
+  serialized_start=2125,
+  serialized_end=2162,
 )
 
 _PREPARESNAPSHOTREQUEST_LABELSENTRY.containing_type = _PREPARESNAPSHOTREQUEST
@@ -1176,8 +1176,8 @@ _SNAPSHOTS = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=2297,
-  serialized_end=3404,
+  serialized_start=2304,
+  serialized_end=3411,
   methods=[
   _descriptor.MethodDescriptor(
     name='Prepare',

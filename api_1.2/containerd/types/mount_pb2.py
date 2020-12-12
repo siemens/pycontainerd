@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from containerd.gogoproto import gogo_pb2 as containerd_dot_gogoproto_dot_gogo__pb2
+from containerd.vendor.gogoproto import gogo_pb2 as containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,9 +20,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z0github.com/containerd/containerd/api/types;types',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1c\x63ontainerd/types/mount.proto\x12\x10\x63ontainerd.types\x1a\x1f\x63ontainerd/gogoproto/gogo.proto\"F\n\x05Mount\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x01(\t\x12\x0f\n\x07options\x18\x04 \x03(\tB2Z0github.com/containerd/containerd/api/types;typesX\x00\x62\x06proto3'
+  serialized_pb=b'\n\x1c\x63ontainerd/types/mount.proto\x12\x10\x63ontainerd.types\x1a&containerd/vendor/gogoproto/gogo.proto\"F\n\x05Mount\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\x12\x0e\n\x06target\x18\x03 \x01(\t\x12\x0f\n\x07options\x18\x04 \x03(\tB2Z0github.com/containerd/containerd/api/types;typesX\x00\x62\x06proto3'
   ,
-  dependencies=[containerd_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
+  dependencies=[containerd_dot_vendor_dot_gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
 
 
@@ -75,8 +75,8 @@ _MOUNT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=83,
-  serialized_end=153,
+  serialized_start=90,
+  serialized_end=160,
 )
 
 DESCRIPTOR.message_types_by_name['Mount'] = _MOUNT
