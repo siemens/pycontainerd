@@ -21,7 +21,6 @@ Ideally the Python containerd API has to be generated only once per containerd A
 The result is version numbers like:
  * 1.2.1 for the second release for API 1.2
  * 1.3.0 for the first release for API 1.3
- * 1.4.0 for the first release for API 1.4
 
 ## License
 
