@@ -29,9 +29,7 @@ The result is version numbers like:
 
 ## License
 
-This project is licensed as [Apache License, Version
-2.0](http://www.apache.org/licenses/LICENSE-2.0) (SPDX-License-Identifier:
-Apache-2.0).
+This project is licensed as [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (SPDX-License-Identifier: Apache-2.0).
 
 You can obtain the full license text from the file `License` of this repository.
 
