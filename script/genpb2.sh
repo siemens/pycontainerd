@@ -84,7 +84,7 @@ if [ "${keep_temp}" = false ] ; then
     TEMP_DIR=$(mktemp -d)
 else
     TEMP_DIR="${BASE_DIR}/tmp"
-    rm -rf "$TEMP_DIR"
+    # rm -rf "$TEMP_DIR"
     mkdir -p "${TEMP_DIR}"
 fi
 
@@ -165,9 +165,11 @@ generate_api () {
     # containerd keeps its service API locked during the lifecycle of a specific
     # minor version, regardless of the patch series. See also:
     # https://github.com/containerd/containerd/blob/master/api/README.md
-    git -c advice.detachedHead=false \
-        clone --branch "$CONTAINERD_TAG" --depth 1 \
-        https://github.com/containerd/containerd.git "$TEMP_DIR/containerd"
+    if [ ! -d "$TEMP_DIR/containerd" ]; then
+        git -c advice.detachedHead=false \
+            clone --branch "$CONTAINERD_TAG" --depth 1 \
+            https://github.com/containerd/containerd.git "$TEMP_DIR/containerd"
+    fi
 
     prepprotos "$TEMP_DIR/containerd/api/services" "$PROTO_DIR" "containerd/services"
     prepprotos "$TEMP_DIR/containerd/api/types" "$PROTO_DIR" "containerd/types"
