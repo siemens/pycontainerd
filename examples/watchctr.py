@@ -36,6 +36,7 @@ def watchctr(args):
         eventsv1 = events_pb2_grpc.EventsStub(channel)
         for ev in eventsv1.Subscribe(events_pb2.SubscribeRequest()):
             print('🖄 event type:', ev.event.type_url)
+            print('⬚ namespace:', ev.namespace)
             print(unwrap(ev))
 
 def main():
