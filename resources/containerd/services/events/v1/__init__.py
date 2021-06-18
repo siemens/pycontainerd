@@ -1,6 +1,8 @@
 import importlib
 import google.protobuf.symbol_database
-import containerd.services.events.v1.events_pb2 as eventsv1
+# use "from ... import ... as ..." instead of "import ... as ..." for backwards
+# compatibility with Python 3.6-, see also https://stackoverflow.com/a/24968941
+from containerd.services.events.v1 import events_pb2 as eventsv1
 
 # Loads all containerd.events.xxx modules, so they will register their message
 # classes with their corresponding type URLs. Only then we can then later look
