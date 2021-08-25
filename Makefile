@@ -3,7 +3,7 @@ VERSION=1.0
 PYTHON_VERSION?=3.7
 IMG_NAME_PR?=docker.pkg.github.com/silvanoc/pycontainerd
 SUBDIRS=script tests infra
-SUPPORTED_APIS=1.2 1.3 1.4
+SUPPORTED_APIS=1.2 1.3 1.4 1.5
 API_DIRS=$(addprefix api_,$(SUPPORTED_APIS))
 
 export
