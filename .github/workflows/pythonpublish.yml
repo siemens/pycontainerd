@@ -1,6 +1,11 @@
 name: Upload Python Package
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version of the release, only the number in the form '1.4'."
+        required: true
   release:
     types: [created]
 
@@ -15,21 +20,29 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
+        if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
+          RELEASE_VERSION=${{ github.events.inputs.version }} ; \
+        elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
+          RELEASE_VERSION=$(echo ${GITHUB_REF##refs/tags/v}) ; \
+        else \
+          echo "Unexpected workflow hook! ${GITHUB_EVENT_NAME}" ; \
+          exit 1 ; \
+        fi
         python -m pip install --upgrade pip
-        ( cd api_1.2 ; pip install setuptools wheel twine )
-        ( cd api_1.3 ; pip install setuptools wheel twine )
-        ( cd api_1.4 ; pip install setuptools wheel twine )
-        ( cd api_1.5 ; pip install setuptools wheel twine )
+        ( cd api_${RELEASE_VERSION} ; pip install setuptools wheel twine )
     - name: Build and publish
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
-        ( cd api_1.2 ; python setup.py sdist bdist_wheel )
-        ( cd api_1.2 ; twine upload dist/* )
-        ( cd api_1.3 ; python setup.py sdist bdist_wheel )
-        ( cd api_1.3 ; twine upload dist/* )
-        ( cd api_1.4 ; python setup.py sdist bdist_wheel )
-        ( cd api_1.4 ; twine upload dist/* )
-        ( cd api_1.5 ; python setup.py sdist bdist_wheel )
-        ( cd api_1.5 ; twine upload dist/* )
+        if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
+          RELEASE_VERSION=${{ github.events.inputs.version }} ; \
+        elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
+          RELEASE_VERSION=$(echo ${GITHUB_REF##refs/tags/v}) ; \
+        else \
+          echo "Unexpected workflow hook! ${GITHUB_EVENT_NAME}" ; \
+          exit 1 ; \
+        fi
+        ( cd api_${RELEASE_VERSION} ; python setup.py sdist bdist_wheel )
+                ( cd api_${RELEASE_VERSION} ; twine upload dist/* )
+
