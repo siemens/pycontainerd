@@ -157,7 +157,7 @@ generate_api () {
         GENERATION=$(grep -oP '^__generation__\s*=\s*.*' api_${API_VERSION}/version | grep -oP '\d+')
         GENERATION=$(expr ${GENERATION} + 1)
     else
-        GENERATION=1
+        GENERATION=0
     fi
 
     # Fetches a specificly tagged release version of containerd and clones into
