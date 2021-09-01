@@ -33,13 +33,14 @@ This project is licensed as [Apache License, Version 2.0](http://www.apache.org/
 
 You can obtain the full license text from the file `License` of this repository.
 
-## Install as Python Package
+## Installation
 
 Installation depends on your starting point:
 
-1. You have a `pycontainerd` Python Wheel package (something like
+1. You get the packages from https://pypi.org/project/containerd
+2. You have a `pycontainerd` Python Wheel package (something like
    `containerd-x.y.z-py3-none-any.whl`).
-2. You only have the source code (the result of cloning the git repository).
+3. You only have the source code (the result of cloning the git repository).
 
 ### Dependencies
 
@@ -47,6 +48,18 @@ Python3 PIP is needed for Wheel installations (either from a ready Wheel package
 or from a self-built package). PIP takes care of installing all the Python
 packages listed as dependencies. Runtime dependencies are nevertheless listed
 below.
+
+### Installation from PyPI (AKA PIP)
+
+Simply let PIP install the latest release for the corresponding containerd API version.
+
+For example, for the container API version 1.5:
+
+```
+sudo pip3 install "containerd==1.5.*"
+```
+
+The quotes are important to avoid that the shell tries to resolve the "*" and passes it untouched to PIP.
 
 ### Installation from Wheel package
 
