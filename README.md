@@ -70,7 +70,7 @@ A Makefile is being provided that takes care of
 1. Building the Wheel package
 2. Installing the Wheel package
 
-Just run from the toplevel directory of this repository:
+Get into the directory corresponding the API version of your containerd installation and run following:
 
 ```bash
 make install
