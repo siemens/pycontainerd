@@ -152,6 +152,7 @@ class Namespaces(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -160,7 +161,7 @@ class Namespaces(object):
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.GetNamespaceRequest.SerializeToString,
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.GetNamespaceResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -168,6 +169,7 @@ class Namespaces(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -176,7 +178,7 @@ class Namespaces(object):
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.ListNamespacesRequest.SerializeToString,
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.ListNamespacesResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Create(request,
@@ -184,6 +186,7 @@ class Namespaces(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -192,7 +195,7 @@ class Namespaces(object):
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.CreateNamespaceRequest.SerializeToString,
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.CreateNamespaceResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -200,6 +203,7 @@ class Namespaces(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -208,7 +212,7 @@ class Namespaces(object):
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.UpdateNamespaceRequest.SerializeToString,
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.UpdateNamespaceResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -216,6 +220,7 @@ class Namespaces(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -224,4 +229,4 @@ class Namespaces(object):
             containerd_dot_services_dot_namespaces_dot_v1_dot_namespace__pb2.DeleteNamespaceRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

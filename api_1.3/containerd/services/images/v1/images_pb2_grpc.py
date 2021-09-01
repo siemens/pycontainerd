@@ -160,6 +160,7 @@ class Images(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -168,7 +169,7 @@ class Images(object):
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.GetImageRequest.SerializeToString,
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.GetImageResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -176,6 +177,7 @@ class Images(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -184,7 +186,7 @@ class Images(object):
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.ListImagesRequest.SerializeToString,
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.ListImagesResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Create(request,
@@ -192,6 +194,7 @@ class Images(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -200,7 +203,7 @@ class Images(object):
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.CreateImageRequest.SerializeToString,
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.CreateImageResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -208,6 +211,7 @@ class Images(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -216,7 +220,7 @@ class Images(object):
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.UpdateImageRequest.SerializeToString,
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.UpdateImageResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -224,6 +228,7 @@ class Images(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -232,4 +237,4 @@ class Images(object):
             containerd_dot_services_dot_images_dot_v1_dot_images__pb2.DeleteImageRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
