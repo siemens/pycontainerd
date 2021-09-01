@@ -44,5 +44,5 @@ jobs:
           exit 1 ; \
         fi
         ( cd api_${RELEASE_VERSION} ; python setup.py sdist bdist_wheel )
-                ( cd api_${RELEASE_VERSION} ; twine upload dist/* )
+        ( cd api_${RELEASE_VERSION} ; twine upload dist/* )
 
