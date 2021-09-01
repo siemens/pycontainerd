@@ -103,6 +103,7 @@ class Events(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -111,7 +112,7 @@ class Events(object):
             containerd_dot_services_dot_events_dot_v1_dot_events__pb2.PublishRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Forward(request,
@@ -119,6 +120,7 @@ class Events(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -127,7 +129,7 @@ class Events(object):
             containerd_dot_services_dot_events_dot_v1_dot_events__pb2.ForwardRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Subscribe(request,
@@ -135,6 +137,7 @@ class Events(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -143,4 +146,4 @@ class Events(object):
             containerd_dot_services_dot_events_dot_v1_dot_events__pb2.SubscribeRequest.SerializeToString,
             containerd_dot_services_dot_events_dot_v1_dot_events__pb2.Envelope.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

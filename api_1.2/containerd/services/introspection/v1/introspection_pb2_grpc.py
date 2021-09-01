@@ -58,6 +58,7 @@ class Introspection(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -66,4 +67,4 @@ class Introspection(object):
             containerd_dot_services_dot_introspection_dot_v1_dot_introspection__pb2.PluginsRequest.SerializeToString,
             containerd_dot_services_dot_introspection_dot_v1_dot_introspection__pb2.PluginsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

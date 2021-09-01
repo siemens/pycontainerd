@@ -183,6 +183,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -191,7 +192,7 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.GetContainerRequest.SerializeToString,
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.GetContainerResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -199,6 +200,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -207,7 +209,7 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.ListContainersRequest.SerializeToString,
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.ListContainersResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListStream(request,
@@ -215,6 +217,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -223,7 +226,7 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.ListContainersRequest.SerializeToString,
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.ListContainerMessage.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Create(request,
@@ -231,6 +234,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -239,7 +243,7 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.CreateContainerRequest.SerializeToString,
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.CreateContainerResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -247,6 +251,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -255,7 +260,7 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.UpdateContainerRequest.SerializeToString,
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.UpdateContainerResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -263,6 +268,7 @@ class Containers(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -271,4 +277,4 @@ class Containers(object):
             containerd_dot_services_dot_containers_dot_v1_dot_containers__pb2.DeleteContainerRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
