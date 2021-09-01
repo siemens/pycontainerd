@@ -148,6 +148,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -156,7 +157,7 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.CreateRequest.SerializeToString,
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.CreateResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -164,6 +165,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -172,7 +174,7 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.DeleteRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -180,6 +182,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -188,7 +191,7 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.ListRequest.SerializeToString,
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.ListResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def AddResource(request,
@@ -196,6 +199,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -204,7 +208,7 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.AddResourceRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeleteResource(request,
@@ -212,6 +216,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -220,7 +225,7 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.DeleteResourceRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListResources(request,
@@ -228,6 +233,7 @@ class Leases(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -236,4 +242,4 @@ class Leases(object):
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.ListResourcesRequest.SerializeToString,
             containerd_dot_services_dot_leases_dot_v1_dot_leases__pb2.ListResourcesResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

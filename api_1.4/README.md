@@ -29,9 +29,7 @@ The result is version numbers like:
 
 ## License
 
-This project is licensed as [Apache License, Version
-2.0](http://www.apache.org/licenses/LICENSE-2.0) (SPDX-License-Identifier:
-Apache-2.0).
+This project is licensed as [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0) (SPDX-License-Identifier: Apache-2.0).
 
 You can obtain the full license text from the file `License` of this repository.
 
@@ -72,7 +70,7 @@ A Makefile is being provided that takes care of
 1. Building the Wheel package
 2. Installing the Wheel package
 
-Just run from the toplevel directory of this repository:
+Get into the directory corresponding the API version of your containerd installation and run following:
 
 ```bash
 make install

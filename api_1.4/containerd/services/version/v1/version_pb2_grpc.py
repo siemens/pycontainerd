@@ -55,6 +55,7 @@ class Version(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -63,4 +64,4 @@ class Version(object):
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             containerd_dot_services_dot_version_dot_v1_dot_version__pb2.VersionResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

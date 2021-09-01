@@ -202,6 +202,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -210,7 +211,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.PrepareSnapshotRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.PrepareSnapshotResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def View(request,
@@ -218,6 +219,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -226,7 +228,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.ViewSnapshotRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.ViewSnapshotResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Mounts(request,
@@ -234,6 +236,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -242,7 +245,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.MountsRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.MountsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Commit(request,
@@ -250,6 +253,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -258,7 +262,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.CommitSnapshotRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Remove(request,
@@ -266,6 +270,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -274,7 +279,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.RemoveSnapshotRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Stat(request,
@@ -282,6 +287,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -290,7 +296,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.StatSnapshotRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.StatSnapshotResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -298,6 +304,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -306,7 +313,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.UpdateSnapshotRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.UpdateSnapshotResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -314,6 +321,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -322,7 +330,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.ListSnapshotsRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.ListSnapshotsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Usage(request,
@@ -330,6 +338,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -338,7 +347,7 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.UsageRequest.SerializeToString,
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.UsageResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Cleanup(request,
@@ -346,6 +355,7 @@ class Snapshots(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -354,4 +364,4 @@ class Snapshots(object):
             containerd_dot_services_dot_snapshots_dot_v1_dot_snapshots__pb2.CleanupRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -230,6 +230,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -238,7 +239,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.InfoRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.InfoResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -246,6 +247,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -254,7 +256,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.UpdateRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.UpdateResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -262,6 +264,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -270,7 +273,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ListContentRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ListContentResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -278,6 +281,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -286,7 +290,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.DeleteContentRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Read(request,
@@ -294,6 +298,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -302,7 +307,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ReadContentRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ReadContentResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Status(request,
@@ -310,6 +315,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -318,7 +324,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.StatusRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.StatusResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListStatuses(request,
@@ -326,6 +332,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -334,7 +341,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ListStatusesRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.ListStatusesResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Write(request_iterator,
@@ -342,6 +349,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -350,7 +358,7 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.WriteContentRequest.SerializeToString,
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.WriteContentResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Abort(request,
@@ -358,6 +366,7 @@ class Content(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -366,4 +375,4 @@ class Content(object):
             containerd_dot_services_dot_content_dot_v1_dot_content__pb2.AbortRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

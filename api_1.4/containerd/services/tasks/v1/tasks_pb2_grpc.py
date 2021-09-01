@@ -315,6 +315,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -323,7 +324,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.CreateTaskRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.CreateTaskResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Start(request,
@@ -331,6 +332,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -339,7 +341,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.StartRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.StartResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Delete(request,
@@ -347,6 +349,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -355,7 +358,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.DeleteTaskRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.DeleteResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def DeleteProcess(request,
@@ -363,6 +366,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -371,7 +375,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.DeleteProcessRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.DeleteResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Get(request,
@@ -379,6 +383,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -387,7 +392,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.GetRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.GetResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def List(request,
@@ -395,6 +400,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -403,7 +409,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ListTasksRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ListTasksResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Kill(request,
@@ -411,6 +417,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -419,7 +426,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.KillRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Exec(request,
@@ -427,6 +434,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -435,7 +443,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ExecProcessRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ResizePty(request,
@@ -443,6 +451,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -451,7 +460,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ResizePtyRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def CloseIO(request,
@@ -459,6 +468,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -467,7 +477,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.CloseIORequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Pause(request,
@@ -475,6 +485,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -483,7 +494,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.PauseTaskRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Resume(request,
@@ -491,6 +502,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -499,7 +511,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ResumeTaskRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListPids(request,
@@ -507,6 +519,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -515,7 +528,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ListPidsRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.ListPidsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Checkpoint(request,
@@ -523,6 +536,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -531,7 +545,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.CheckpointTaskRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.CheckpointTaskResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Update(request,
@@ -539,6 +553,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -547,7 +562,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.UpdateTaskRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Metrics(request,
@@ -555,6 +570,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -563,7 +579,7 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.MetricsRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.MetricsResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Wait(request,
@@ -571,6 +587,7 @@ class Tasks(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -579,4 +596,4 @@ class Tasks(object):
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.WaitRequest.SerializeToString,
             containerd_dot_services_dot_tasks_dot_v1_dot_tasks__pb2.WaitResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

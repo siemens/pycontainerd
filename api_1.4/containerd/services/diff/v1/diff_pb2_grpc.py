@@ -78,6 +78,7 @@ class Diff(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -86,7 +87,7 @@ class Diff(object):
             containerd_dot_services_dot_diff_dot_v1_dot_diff__pb2.ApplyRequest.SerializeToString,
             containerd_dot_services_dot_diff_dot_v1_dot_diff__pb2.ApplyResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def Diff(request,
@@ -94,6 +95,7 @@ class Diff(object):
             options=(),
             channel_credentials=None,
             call_credentials=None,
+            insecure=False,
             compression=None,
             wait_for_ready=None,
             timeout=None,
@@ -102,4 +104,4 @@ class Diff(object):
             containerd_dot_services_dot_diff_dot_v1_dot_diff__pb2.DiffRequest.SerializeToString,
             containerd_dot_services_dot_diff_dot_v1_dot_diff__pb2.DiffResponse.FromString,
             options, channel_credentials,
-            call_credentials, compression, wait_for_ready, timeout, metadata)
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
