@@ -1,5 +1,3 @@
-LAST_RELEASE=$(shell script/get_version.bash -r)
-VERSION=1.0
 PYTHON_VERSION?=3.7
 IMG_NAME_PR?=docker.pkg.github.com/silvanoc/pycontainerd
 SUBDIRS=script tests infra
@@ -10,10 +8,6 @@ export
 
 .PHONY: all
 all: packages
-
-version:
-	@echo Last release: $(LAST_RELEASE)
-	@echo Version: $(VERSION)
 
 .PHONY: stubs
 stubs:
