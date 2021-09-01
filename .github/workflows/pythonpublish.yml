@@ -23,7 +23,7 @@ jobs:
         if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
           RELEASE_VERSION="${{ github.event.inputs.version }}" ; \
         elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
-          RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v})" ; \
+          RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v} | sed 's/\([[:digit:]]\+\.[[:digit:]]\+\)\.[[:digit:]]\+/\1/g')" ; \
         else \
           echo "Unexpected workflow hook! ${GITHUB_EVENT_NAME}" ; \
           exit 1 ; \
@@ -38,7 +38,7 @@ jobs:
         if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
           RELEASE_VERSION="${{ github.event.inputs.version }}" ; \
         elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
-          RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v})" ; \
+          RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v} | sed 's/\([[:digit:]]\+\.[[:digit:]]\+\)\.[[:digit:]]\+/\1/g')" ; \
         else \
           echo "Unexpected workflow hook! ${GITHUB_EVENT_NAME}" ; \
           exit 1 ; \
