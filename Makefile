@@ -17,6 +17,10 @@ api_%: script/genpb2.sh resources/containerd/__init__.py.in resources/containerd
 	./script/genpb2.sh -a $*
 	cp resources/api_Makefile $@/Makefile
 
+regenerate_%:
+	bash -x ./script/genpb2.sh -n -a $*
+	cp resources/api_Makefile api_$*/Makefile
+
 .PHONY: packages test docker-test
 packages: $(API_DIRS)
 	@ for api in $(API_DIRS) ; do $(MAKE) -C $$api dist ; done
