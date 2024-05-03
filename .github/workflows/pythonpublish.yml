@@ -19,9 +19,11 @@ jobs:
       with:
         python-version: '3.x'
     - name: Install dependencies
+      env:
+        INPUT_VERSION: ${{ github.event.inputs.version }}
       run: |
         if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
-          RELEASE_VERSION="${{ github.event.inputs.version }}" ; \
+          RELEASE_VERSION="${INPUT_VERSION}" ; \
         elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
           RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v} | sed 's/\([[:digit:]]\+\.[[:digit:]]\+\)\.[[:digit:]]\+/\1/g')" ; \
         else \
@@ -34,9 +36,10 @@ jobs:
       env:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+        INPUT_VERSION: ${{ github.event.inputs.version }}
       run: |
         if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]] ; then \
-          RELEASE_VERSION="${{ github.event.inputs.version }}" ; \
+          RELEASE_VERSION="${INPUT_VERSION}" ; \
         elif [[ "${GITHUB_EVENT_NAME}" == "release" ]] ; then \
           RELEASE_VERSION="$(echo ${GITHUB_REF##refs/tags/v} | sed 's/\([[:digit:]]\+\.[[:digit:]]\+\)\.[[:digit:]]\+/\1/g')" ; \
         else \
